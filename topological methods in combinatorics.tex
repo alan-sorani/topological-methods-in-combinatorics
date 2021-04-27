@@ -12,7 +12,7 @@
 
 \begin{document}
 \frontmatter
-\frontpage{atlas}{0.8\textwidth}{מפת העולם. על ידי ג'ררד ואן שגן.}
+\frontpage{polyhedron}{0.8\textwidth}{פוליהדרון קמור בשם \textenglish{Cuboctahedron-Rhombic Dodecahedron Compound}.}
 \tableofcontents
 \countlectures
 \newpage
@@ -38,15 +38,11 @@
 
 \begin{english}
 \begin{description}
-\item[M. Spivak:] Calculus on manifolds: a modern approach to classical theorems of advanced calculus
+\item[J. Matoušek, G. M. Ziegler:] Around Brouwer’s fixed point theorem
 
-\item[J. Milnor:] Topology from athe differentiable viewpoint
+\item[J. Matoušek:] Using the Borsuk-Ulam Theorem
 
-\item[J. Lee:] Introduction to smooth manifolds
-
-\item[L. Conlon:] Differentiable manifolds: a first course
-
-\item[V. Guillemin, A, Pollcak:] Differential topology
+\item[D. Kozlov, R. Meshulam:] Around Helly's Theorem
 \end{description}
 \end{english}
 
@@ -1222,7 +1218,7 @@ $\set{a_1, \ldots, a_{d+1}}$.
 
 \subsection{מסקנות מקרתיאודורי צבעוני}
 
-\begin{theorem}[הלי צבעוני]
+\begin{theorem}[הלי צבעוני] \label{theorem:colourful-helly}
 תהיינה
 $\mcal{K}_1, \ldots, \mcal{K}_{d+1}$
 משפחות של קבוצות קמורות ב־%
@@ -1248,6 +1244,526 @@ $A = \bigsqcup_{i \in [k]} A_k$
 כאשר
 \[\text{.} \bigcap_{i \in [k]} \conv\prs{A_i} \neq \ns\]
 \end{theorem}
+
+\subsection{קרתיאודורי עבור חרוטים}
+
+\begin{definition}
+עבור
+$A \subseteq \mbb{R}^{d+1}$
+נגדיר
+את ה־%
+\emph{\textenglish{positive span} של $A$}
+על ידי
+\begin{align*}
+\text{.} \mrm{pos}\prs{A} \ceq \set{\sum_{i \in [m]} \lambda_i a_i}{a_i \in A, \, \lambda_i \geq 0}
+\end{align*}
+\end{definition}
+
+\begin{definition}
+קבוצה
+$C \subseteq \mbb{R}^{d+1}$
+נקראת
+\emph{חרוט קמור שקודקודו
+$0$}
+אם
+$C$
+קמורה ולכל
+$c \in C$
+גם
+$\lambda c \in C$
+לכל
+$\lambda \geq 0$.
+\end{definition}
+
+\begin{remark}
+לכל
+$A \subseteq \mbb{R}^{d+1}$
+הקבוצה
+$\mrm{pos}\prs{A}$
+היא חרוט קמור ב־%
+$\mbb{R}^{d+1}$.
+\end{remark}
+
+\begin{theorem}[קריתיאודורי עבור קמור חיובי]
+תהי
+$A \subseteq \mbb{R}^{d+1}$
+ותהי
+$p \in \mrm{pos}\prs{A}$.
+אזי יש
+$A_0 \subseteq A$
+עם
+$\abs{A_0} \leq d+1$
+כך שמתקיים
+$p \in \mrm{pos}\prs{A_0}$.
+\end{theorem}
+
+\begin{proof}
+בדיוק כמו בהוכחת משפט קרתיאודורי, נבחר
+$A_0 = \set{u_1, \ldots, u_n} \subseteq A$
+מינימלית עבורה
+$p \in \mrm{pos}\set{u_1, \ldots, u_n}$.
+נכתוב
+\[p = \sum_{i \in [n]} \lambda_i u_i\]
+עם
+$\lambda_i \geq 0$,
+ונראה כי
+$d+1 \geq n$.
+אחרת,
+$n \geq d+2$
+ולכן יש צירוף לינארי
+\[\sum_{i \in [n]} \mu_i u_i = 0\]
+שאינו טריוויאלי.
+תהי
+\[\theta \ceq \min \set{\frac{\lambda_i}{\mu_i}}{\mu_i > 0}\]
+(בלי הגבלת הכלליות קיימים
+$\mu_i > 0$)
+ויהי
+$i_0 \in [n]$
+עבורו
+$\theta = \frac{\lambda_{i_0}}{\mu_{i_0}}$.
+אז
+\begin{align*}
+p &= \sum_{i \in [n]} \lambda_i u_i
+\\&= \sum_{i \in [n]} \prs{\lambda_i - \theta \mu_i} u_i
+\\&= \sum_{i \neq i_0} \prs{\lambda_i - \theta \mu_i} u_i + \cancelto{0}{\prs{\lambda_{i_0} - \frac{\lambda_{i_0}}{\mu_{i_0}} \mu_{i_0}}} u_{i_0}
+\end{align*}
+וקיבלנו את
+$p$
+כיצירוף חיובי של פחות מה־%
+$u_i$.
+\end{proof}
+
+\begin{theorem}[קרתיאודורי החיובי עבור קמור חיובי]
+תהיינה
+$A_1, \ldots, A_{d+1} \subseteq \mbb{R}^{d+1}$
+ותהי
+$p \in \bigcap_{i \in [d+1]} \mrm{pos}\prs{A_i}$.
+אז יש
+$a_i \in A_{i}$
+לכל
+$i \in [d+1]$
+עבורן
+\[\text{.} p \in \mrm{pos}\set{a_1, \ldots, a_{d+1}}\]
+\end{theorem}
+
+\begin{lemma}\label{lemma:pos-conditions}
+נניח כי
+$u_1, \ldots, u_m \in \mbb{R}^{d+1}$.
+נגיד שהן מקיימות את תנאי
+1
+אם
+$\prs{\vec{0}, -1} \in \mrm{pos}\set{u_1, \ldots, u_m}$.
+יהיו
+$H_{u_i, 0}$
+על־מישורים הניצבים ל־%
+$u_i$
+ונסתכל על חצאי המרחבים
+$H_{u_i, 0}^+$.
+נגיד שה־%
+$u_i$
+מקיימות את תנאי 2 אם
+\[\text{.} \bigcap_{i \in [m]} H_{u_i, 0}^+ \cap \mbb{R}^d \times \set{1} = \ns\]
+נטען כי תנאים 1 ו־2 שקולים.
+\end{lemma}
+
+\begin{proof}
+\begin{itemize}
+\item נניח שמתקיים תנאי 1 ויהיו
+$\lambda_i \geq 0$
+עבורן
+\[\text{.} \prs{\vec{0}, -1} = \sum_{i \in [m]} \lambda_i u_i\]
+נניח כי
+$z \in \bigcap_{i \in [m]} H_{u_i, 0}^+$
+ונראה כי הקואורדינטה האחרונה של
+$z$
+אי־חיובית.
+אכן,
+\begin{align*}
+-z_{d+1} &= \prs{\vec{0}, -1} \cdot z
+\\&= \sum_{i \in [m]} \lambda_i \prs{u_i \cdot z}
+\\&\geq 0
+\end{align*}
+כלומר
+$z_{d+1} \leq 0$
+ובפרט
+$z \notin \mbb{R}^d \times \set{1}$.
+\item נניח שתנאי 1 אינו מתקיים ונראה כי תנאי 2 אינו מתקיים.
+נניח כי
+\[\text{.} \prs{\vec{0}, -1} \notin C \ceq \mrm{pos}\set{u_1, \ldots, u_m}\]
+נפריד את
+$C$
+מ־%
+$\prs{\vec{0}, -1}$
+על ידי על מישור
+$H_{w,\alpha}$.
+כלומר,
+\[\text{.} \forall z \in C \colon \prs{0,-1} \cdot w < \alpha \leq z \cdot w\]
+מתקיים
+$0 \in C$
+לכן
+$\alpha \leq 0 \cdot w = 0$
+ונקבל
+$\alpha \leq 0$.
+אם עבור
+$i \in [m]$
+כלשהו מתקיים
+$u_i \cdot w < 0$
+נקבל
+\[\lim_{\lambda \to \infty} \prs{\lambda u_i} \cdot w = -\infty < \alpha\]
+בסתירה כי
+$\lambda u_i \in C$
+לכל
+$\lambda \geq 0$.
+
+לכן
+$\alpha \leq 0$
+וגם
+$u_i \cdot w \geq 0$
+לכל
+$i \in [m]$.
+נקבל
+\[-w_{d+1} = \prs{\vec{0}, -1} \cdot w < \alpha \leq 0\]
+ולכן
+$w_{d+1} > 0$.
+אז
+$w \in H_{u_i, 0}^+$
+ואז
+\[\text{.} \frac{w}{w_{d+1}} \in \bigcap_{i \in [m]} H_{u_i, 0}^+ \cap \mbb{R}^d \times \set{1}\]
+לכן תנאי 2 אינו מתקיים.
+\end{itemize}
+\end{proof}
+
+\begin{definition}[פיאון קמור]
+\emph{פיאון קמור}
+הוא קמור של מספר סופי של נקודות.
+\end{definition}
+
+\begin{definition}[עצב]
+בהינתן
+$K = \set{K_1, \ldots, K_m}$
+משפחה של קבוצות קמורות ב־%
+$\mbb{R}^d$
+נגדיר את
+\emph{העצב \textenglish{(nerve)}
+של
+$\mcal{K}$}
+על ידי
+\[\text{.} N\prs{\mcal{K}} \ceq \set{I \subseteq \brs{m}}{\bigcap_{i \in I} K_i \neq \ns}\]
+\end{definition}
+
+\begin{remark}
+העצב של
+$\mcal{K}$
+מתאר את החיתוכים של קבוצות ב־%
+$\mcal{K}$.
+זה קומפלקס סימפליציאלי: אם
+$\sigma \in N\prs{\mcal{K}}$
+וגם
+$\tau \subseteq \sigma$
+אז
+$\tau \in N\prs{\mcal{K}}$.
+העצב של
+$N\prs{\mcal{K}}$
+שקול הומוטופית ל־%
+$\bigcup_{K \in \mcal{K}} K$,
+אבל נדון בכך בהמשך.
+\end{remark}
+
+\begin{theorem}[הלי במונחי העצב]
+תהי
+$\mcal{K} = \set{K_1, \ldots, K_m}$
+משפחת קבוצות קמורות ב־%
+$\mbb{R}^d$.
+אם
+$N\prs{\mcal{K}}$
+מכיל את כל
+$\sigma \subseteq \brs{m}$
+המקיימת
+$\abs{\sigma} \leq d+1$
+אז
+$N\prs{K} = \mcal{P}\prs{\brs{m}}$
+אוסף כל התת־קבוצות של
+$\brs{m}$.
+\end{theorem}
+
+\begin{proposition}\label{proposition:polytopes-nerve}
+יהיו
+$K_1, \ldots, K_m$
+קבוצות קמורות ב־%
+$\mbb{R}^d$
+ותהי
+$\mcal{K} \ceq \set{K_1, \ldots, K_m}$.
+אז קיימים פיאונים
+$P_1, \ldots, P_m$
+עבורם
+$P_i \subseteq K_i$
+לכל
+$i \in [m]$
+וגם
+\[M\prs{P} = N\prs{\mcal{K}}\]
+כאשר
+$\mcal{P} \ceq \set{P_1, \ldots, P_m}$.
+\end{proposition}
+
+\begin{remark}
+שאלה מעניינת היא האם אפשר לאפיין את העצבים האפשריים של אוספי קבוצות קמורות ב־%
+$\mbb{R}^d$.
+בעוד זאת שאלה קשה באופן כללי, יש איפיון במקרה
+$d = 1$.
+למשל, אנו יודעים שאת העצב באיור
+%TODO add figure
+אי אפשר לקבל ב־%
+$\mbb{R}$.
+יהי
+$\mcal{K} = \set{I_i}{i \in [7]}$
+אוסף של שבעה קטעים ב־%
+$\mbb{R}$.
+במקרה זה,
+$I_6$
+חותך את
+$I_3$
+שחותך את
+$I_1$,
+אבל
+$I_1$
+לא חותך את
+$I_6$
+אז נקבל קטעים כמו באיור
+%TODO add fig.
+כעת
+$I_2$
+חותך את
+$I_1$
+ואת
+$I_5$
+שזר ל־%
+$I_1$
+לכן נקבל קטעים כמו באיור
+%TODO add fig.
+אז
+$I_4$
+שחותך את
+$I_1$
+חייב להיות בין
+$I_3, I_2$
+אבל אז
+$I_4 \subseteq I_!$
+ולכן
+$I_7$
+שחותך את
+$I_4$
+חותך גם את
+$I_1$.
+\end{remark}
+
+\begin{proof}
+לכל
+$\sigma \in N\prs{\mcal{K}}$
+נבחר
+$p_\sigma \in \bigcap_{i \in \sigma} K_i$.
+נגדיר
+\[\text{.} P_i \ceq \conv\set{p_\sigma}{i \in \sigma \in N\prs{\mcal{K}}}\]
+נשים לב שאם
+$i \in \sigma$
+אז
+$p_\sigma \in K_i$.
+לכן
+$P_i \subseteq K_i$.
+לכן
+$N\prs{\mcal{P}} \subseteq N\prs{\mcal{K}}$.
+מאידך, אם
+$\sigma \in N\prs{\mcal{K}}$
+אז
+$p_\sigma \in \bigcap_{i \in \sigma} P_i$
+ולכן
+$\sigma \in N\prs{\mcal{P}}$.
+\end{proof}
+
+\begin{corollary}\label{corollary:disjoint_halfplanes}
+תהיינה
+$K_1, \ldots, K_m$
+קומפקטיות קמורות עבורן
+$\bigcap_{i \in [m]} K_i = \ns$.
+אזי קיימים חצאי מרחבים
+$D_1, \ldots, D_m$
+כך שמתקיים
+$K_i \subseteq D_i$
+לכל
+$i \in [m]$,
+וגם
+$\bigcap_{i \in [m]} D_i = \ns$.
+\end{corollary}
+
+\begin{proof}
+נוכיח באינדוקציה על
+$\ell$
+שקיימים
+$D_1, \ldots, D_\ell$
+עבורם
+$K_i \subseteq D_i$
+וגם
+\[\text{.} D_1 \cap \ldots \cap D_\ell \cap K_{\ell + 1} \cap \ldots \cap K_m = \ns\]
+נניח שהוכחנו עבור
+$\ell < m$
+ונוכיח עבור
+$\ell+1$
+(זה כולל את מקרה הבסיס).
+אז
+\begin{align*}
+D_1 \cap \ldots \cap D_\ell \cap K_{\ell + 1} \cap \ldots \cap K_m = \ns
+\end{align*}
+כלומר
+\begin{align*}
+K_{\ell+1} \cap \prs{D_1 \cap \ldots \cap D_{\ell} \cap K_{\ell + 2} \cap \ldots \cap K_m} = \ns
+\end{align*}
+ולכן קיים
+$H_{u,\alpha}^+$
+עבורו
+$K_{\ell+1} \subseteq H_{\u,\alpha}^+$
+וגם
+\[\text{.} D_1 \cap \ldots \cap D_\ell \cap K_{\ell+2} \cap \ldots \cap K_m \subseteq \mrm{int}H_{u,\alpha}^-\]
+כלומר,
+\[\text{.} D_1 \cap \ldots \cap D_\ell \cap K_{\ell+2} \cap \ldots \cap K_m \cap H_{u,\alpha}^+ = \ns\]
+ניקח
+$D_{\ell+1} \ceq H_{\u,\alpha}^+$.
+\end{proof}
+
+\begin{proof}[\ref{theorem:colourful-helly}]
+בלי הגבלת הכלליות, מטענה
+\ref{proposition:polytopes-nerve}
+אפשר להניח ש־%
+$K_{i,j}$
+קומפקטיות לכל
+$K_{i,j} \in \mcal{K}_i$.
+
+לפי
+\ref{corollary:disjoint_halfplanes}
+קיימים חצאי מרחבים
+$D_{i,j}$
+כך ש־%
+$K_{i,j} \subseteq D_{i,j}$
+לכל
+$K_{i,j} \in \mcal{K}_i$
+וכך שמתקיים
+$\bigcap_{j} D_{i,j} = \ns$.
+נציג
+\[\text{.} D_{i,j} = H_{u_{i,j}, \alpha_{i,j}}^+ = \set{v \in \mbb{R}^d}{v \cdot u_{i,j} \geq \alpha_{i,j}}\]
+יהי
+$w_{i,j} = \prs{u_{i,j}, -\alpha_{i,j}} \in \mbb{R}^{d+1}$.
+
+נשים לב שמתקיים
+\[\bigcap_j H_{w_{i,j}, 0}^+ \cap \prs{\mbb{R}^d \times \set{1}} = \ns\]
+אם
+$v = \prs{v', v_{d+1}}$
+בחיתוך הנ"ל אז
+$w_{i,j} \cdot \prs{v', v_{d+1}} \geq 0$
+ומצד שני
+$v_{d+1} = 1$.
+אז
+\begin{align*}
+v' \cdot u_{i,j} + \prs{-\alpha_{i,j}} \cdot 1 \geq 0
+\end{align*}
+ולכן
+$v' \cdot u_{i,j} \geq \alpha_{i,j}$
+לכל
+$j$.
+אז
+$v' \in D_{i,j}$
+לכל
+$j$,
+בסתירה לכך שמתקיים
+\[\text{.} \bigcap_j D_{i,j} = \ns\]
+לכן, לפי
+\ref{lemma:pos-conditions}
+מתקיים
+\[\prs{\vec{0}, -1} \in \mrm{pos}\set{w_{i,j}}_j\]
+לכל
+$i \in [d+1]$.
+לפי קרתיאודורי הצבעוני עבור
+\textenglish{pos}
+קיימת בחירה
+$w_{1, j_1}, w_{2,j_2}, \ldots, w_{d+1, j_{d+1}}$
+כך שמתקיים
+\[\text{.} \prs{\vec{0},-1} \in \mrm{pos}\set{w_{i,j_i}}_{i \in [d+1]}\]
+
+לפי
+\ref{lemma:pos-conditions}
+נקבל כי
+\[\text{.} \bigcap_{i \in \brs{d+1}} H_{w_{i,j_i},0}^+ \cap \prs{\mbb{R}^d \times \set{1}} = \ns\]
+אז
+\[\bigcap_{i \in [d+1]} K_{i, j_i} \subseteq \bigcap_{i \in [d+1]} D_{i, j_i} = f\bigcap_{i \in \brs{d+1}} H_{u_{i,j_i, \alpha_{i, j_i}}}^+ = \ns\]
+כיוון שאם
+$z \in \bigcap_{i \in [d]} H_{u_{i,j_i}, \alpha_{i,j_i}}^+$
+אז
+$z \cdot u_{i,j_i} \geq \alpha_{i,j_i}$
+לכל
+$i$
+ואז
+\begin{align*}
+\prs{z,1} \cdot w_{i,j_i} &= \prs{z,1} \cdot \prs{u_{i,j_i}, -\alpha_{i,j_i}}
+\\&= z \cdot u_{i, j_i} - \alpha_{i,j_i} > 0
+\end{align*}
+ונקבל כי
+\[\prs{z,1} \in \bigcap_{i \in [d+1]} H_{w_{i,j_i}}^+ \cap \prs{\mbb{R}^d \times \set{1}}\]
+בסתירה לביטוי קודם.
+קיבלנו
+\[\bigcap_{i \in [d+1]} K_{i, j_i} = \ns\]
+בסתירה להנחה.
+\end{proof}
+
+\begin{theorem}[רדון]
+תהיינה
+$u_1, \ldots, u_{d+2} \in \mbb{R}^d$.
+קיימת חלוקה
+$\brs{d+2} = I_1 \sqcup I_2$
+עבורה
+\begin{align*}
+\text{.} \conv\set{u_i}_{i \in I_1} \cap \conv\set{u_i}_{i \in I_2} = \ns
+\end{align*}
+\end{theorem}
+
+נשאל מה מספר הנקודות המינימלי
+$m$
+כך שלכל
+$u_1, \ldots, u_m \in \mbb{R}^2$
+תהיה חלוקה
+$\brs{m} = I_1 \sqcup I_2 \sqcup I_3$
+עבורה
+\[\text{.} \bigcap_{j \in [3]} \conv\set{u_i}_{i \in I_j} \neq \ns\]
+
+\begin{theorem}[טברברג]
+אם
+$u_1, \ldots, u_m \in \mbb{R}^2$
+וגם
+$m \geq 3\prs{k-1} + 1$
+אז יש חלוקה
+$\brs{m} = \bigsqcup_{j \in [k]} I_j$
+וגם
+\[\text{.} \bigcap_{j \in [k]} \conv\set{u_i}_{i \in I_j} \neq \ns\]
+\end{theorem}
+
+באופן כללי המשפט אומר כך:
+
+\begin{theorem}
+אם
+$u_1, \ldots, u_m \in \mbb{R}^d$
+וגם
+$m \geq \prs{d+1}\prs{k-1} + 1$
+אז יש חלוקה
+$\brs{m} = \bigsqcup_{j \in [k]} I_j$
+וגם
+\[\text{.} \bigcap_{j \in [k]} \conv\set{u_i}_{i \in I_j} \neq \ns\]
+\end{theorem}
+
+\begin{remark}
+על ידי הסתכלות על
+$d+1$
+זוגות של נקודות קרובות ב־%
+$\mbb{R}^d$
+אפשר לראות שהחסם התחתון במשפט טברברג אופטימלי, כיוון שבמקרה זה אין חלוקת
+$k$%
+־טברברג.
+\end{remark}
 
 \backmatter
 \end{document}
