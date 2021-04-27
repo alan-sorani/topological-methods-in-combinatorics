@@ -54,11 +54,17 @@
 \contentsline {theoremx}{{משפט}{1.3.{13}}{הלי במונחי העצב}}{13}{theoremx.1.3.13}%
 \contentsline {proposition}{{טענה}{1.3.{14}}{}}{13}{theoremx.1.3.14}%
 \contentsline {remark}{{הערה}{1.3.{15}}{}}{13}{theoremx.1.3.15}%
-\contentsline {proof}{{הוכחה}{14}{}}{13}{proof.14}%
-\contentsline {corollary}{{מסקנה}{1.3.{16}}{}}{13}{theoremx.1.3.16}%
+\contentsline {proof}{{הוכחה}{14}{}}{14}{proof.14}%
+\contentsline {corollary}{{מסקנה}{1.3.{16}}{}}{14}{theoremx.1.3.16}%
 \contentsline {proof}{{הוכחה}{15}{}}{14}{proof.15}%
 \contentsline {proof}{{הוכחה}{16}{\ref {theorem:colourful-helly}}}{14}{proof.16}%
 \contentsline {theoremx}{{משפט}{1.3.{17}}{רדון}}{15}{theoremx.1.3.17}%
 \contentsline {theoremx}{{משפט}{1.3.{18}}{טברברג}}{15}{theoremx.1.3.18}%
-\contentsline {theoremx}{{משפט}{1.3.{19}}{}}{15}{theoremx.1.3.19}%
-\contentsline {remark}{{הערה}{1.3.{20}}{}}{15}{theoremx.1.3.20}%
+\contentsline {remark}{{הערה}{1.3.{19}}{}}{15}{theoremx.1.3.19}%
+\contentsline {proposition}{{טענה}{1.3.{20}}{}}{16}{theoremx.1.3.20}%
+\contentsline {remark}{{הערה}{1.3.{21}}{}}{16}{theoremx.1.3.21}%
+\contentsline {proof}{{הוכחה}{17}{}}{16}{proof.17}%
+\contentsline {proof}{{הוכחה}{18}{\ref {theorem:tverberg}}}{16}{proof.18}%
+\contentsline {theoremx}{{משפט}{1.3.{22}}{\text {Barany}}}{17}{theoremx.1.3.22}%
+\contentsline {proof}{{הוכחה}{19}{}}{17}{proof.19}%
+\contentsline {remark}{{הערה}{1.3.{23}}{}}{18}{theoremx.1.3.23}%

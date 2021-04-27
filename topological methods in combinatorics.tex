@@ -1510,10 +1510,17 @@ $\mcal{P} \ceq \set{P_1, \ldots, P_m}$.
 $\mbb{R}^d$.
 בעוד זאת שאלה קשה באופן כללי, יש איפיון במקרה
 $d = 1$.
-למשל, אנו יודעים שאת העצב באיור
-%TODO add figure
-אי אפשר לקבל ב־%
+למשל, אנו יודעים שאת הגרף באיור
+\ref{figure:1}
+אי אפשר לקבל כעצב ב־%
 $\mbb{R}$.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/1}
+\caption{קומפלקס שלא ניתן לקבל כעצב של קבוצת קטעים במישור.}
+\label{figure:1}
+\end{figure}
+
 יהי
 $\mcal{K} = \set{I_i}{i \in [7]}$
 אוסף של שבעה קטעים ב־%
@@ -1529,7 +1536,13 @@ $I_1$
 לא חותך את
 $I_6$
 אז נקבל קטעים כמו באיור
-%TODO add fig.
+\ref{figure:2}.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/2}
+\caption{}
+\label{figure:2}
+\end{figure}
 כעת
 $I_2$
 חותך את
@@ -1539,7 +1552,13 @@ $I_5$
 שזר ל־%
 $I_1$
 לכן נקבל קטעים כמו באיור
-%TODO add fig.
+\ref{figure:3}.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/3}
+\caption{}
+\label{figure:3}
+\end{figure}
 אז
 $I_4$
 שחותך את
@@ -1554,6 +1573,14 @@ $I_7$
 $I_4$
 חותך גם את
 $I_1$.
+ראו איור
+\ref{figure:4}.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/4}
+\caption{}
+\label{figure:4}
+\end{figure}
 \end{remark}
 
 \begin{proof}
@@ -1731,20 +1758,7 @@ $\brs{m} = I_1 \sqcup I_2 \sqcup I_3$
 עבורה
 \[\text{.} \bigcap_{j \in [3]} \conv\set{u_i}_{i \in I_j} \neq \ns\]
 
-\begin{theorem}[טברברג]
-אם
-$u_1, \ldots, u_m \in \mbb{R}^2$
-וגם
-$m \geq 3\prs{k-1} + 1$
-אז יש חלוקה
-$\brs{m} = \bigsqcup_{j \in [k]} I_j$
-וגם
-\[\text{.} \bigcap_{j \in [k]} \conv\set{u_i}_{i \in I_j} \neq \ns\]
-\end{theorem}
-
-באופן כללי המשפט אומר כך:
-
-\begin{theorem}
+\begin{theorem}[טברברג] \label{theorem:tverberg}
 אם
 $u_1, \ldots, u_m \in \mbb{R}^d$
 וגם
@@ -1758,11 +1772,258 @@ $\brs{m} = \bigsqcup_{j \in [k]} I_j$
 \begin{remark}
 על ידי הסתכלות על
 $d+1$
-זוגות של נקודות קרובות ב־%
+קבוצות בגודל
+$k-1$
+ של נקודות קרובות (או שוות זאת לזאת, לא הנחנו שה־%
+$u_i$
+שונות)
+  ב־%
 $\mbb{R}^d$
 אפשר לראות שהחסם התחתון במשפט טברברג אופטימלי, כיוון שבמקרה זה אין חלוקת
 $k$%
 ־טברברג.
+\end{remark}
+
+%lecture 27.4.2021
+
+בהוכחת משפט טברברג נרצה לעבוד במרחב
+$\prs{k-1}\prs{d+1}$%
+־מימדי.
+נזכיר כי
+$M_{k \times \ell}\prs{\mbb{R}} \cong \mbb{R}^k \tensor \mbb{R}^\ell$
+מרחב ממימד
+$k\ell$.
+בהינתן
+$u \in \mbb{R}^k, v \in \mbb{R}^\ell$
+נגדיר
+\[\text{.} u \tensor v \ceq u v^T = \pmat{u_1 v_1 & & \cdots & & u_\ell v_\ell \\ & & & & \\ \vdots & & & & \vdots \\ & & & & \\ u_k v_1 & & \cdots & & u_k v_\ell}\]
+
+\begin{proposition}
+נניח כי
+$v_1, \ldots, v_k \in \mbb{R}^{k-1}$
+מקיימים
+\[\sum_{i \in [k]} v_i = 0\]
+ושזאת התלות היחידה ביניהם.
+למשל אפשר לקחת
+$v_1, \ldots, v_{k-1}$
+בסיס ל־%
+$\mbb{R}^{k-1}$
+ו־%
+$v_k = -\prs{v_1 + \ldots + v_{k-1}}$
+(זה בעצם המקרה הכללי).
+נניח גם כי
+$u_1, \ldots, u_k \in \mbb{R}^{N}$
+מקיימים
+\[\text{.} \sum_{i \in [k]} u_i \tensor v_i = 0 \in \mbb{R}^N \tensor \mbb{R}^{\prs{k-1}} \cong M_{N \times \prs{k-1}}\]
+אז
+$u_i = u_j$
+לכל
+$i,j \in [k]$.
+\end{proposition}
+
+\begin{remark}
+ברור שאם
+$u_i = u_j$
+לכל
+$i,j \in [k]$
+אז
+\[\text{.} \sum_{i \in \brs{k}} u_i \tensor v_i = u \tensor \sum_{i \in \brs{k}} v_i = u \tensor 0 = 0\]
+\end{remark}
+
+\begin{proof}
+יהי
+$z \in \mbb{R}^N$.
+מתקיים
+\begin{align*}
+0 &= z^T \cdot \prs{\sum_{i \in [k]} u_i v_i^T} = \sum_{i \in [k]} \prs{z^T \cdot u_i} \cdot v_i^T
+\end{align*}
+לכן
+$z^T \cdot u_i = z^T \cdot u_j$
+לכל
+$i,j \in [k]$.
+זה נכון לכל
+$z \in \mbb{R}^N$
+לכן
+$z^T \prs{u_i - u_j} = 0$
+לכל
+$z \in \mbb{R}^n$
+ולכן
+$u_i = u_j$.
+\end{proof}
+
+\begin{proof}[\ref{theorem:tverberg}]
+על ידי הוספת רכיב לכל
+$u_i$
+אפשר להניח כי
+$u_1, \ldots, u_m \in \mbb{R}^{d+1}$
+וגם ש־%
+$u_i \cdot \1 = 1$
+כאשר
+$\1 = \pmat{1 \\ 1 \\ \vdots \\ 1 \\ 1} \in \mbb{R}^{d+1}$.
+יהיו
+$v_1, \ldots, v_k \in \mbb{R}^{k-1}$
+עבורם
+$\sum_{i \in [k]} v_i = 0$
+וזאת התלות היחידה ביניהם.
+נשתמש בקרתיאודורי הצבעוני עבור
+$\mbb{R}^{\prs{d+1}\prs{k-1}} \cong M_{\prs{d+1} \times \prs{k-1}}\prs{\mbb{R}}$.
+לכל
+$i \in [m]$
+תהי
+\[\text{.} A_i = \set{u_i \tensor v_j}{j \in [k]} \subseteq \mbb{R}^{\prs{d+1}\prs{k-1}}\]
+
+מתקיים
+$0 \in \bigcap_{i \in [m]} \conv\prs{A_i}$
+כי
+\[\text{.} 0 = u_i \tensor 0 = u_i \tensor \prs{\frac{1}{k} \sum_{j \in [k]} v_j} = \frac{1}{k} \sum_{j \in [k]} u_i \tensor v_j\]
+לפי קרתיאודורי הצבעוני, לכל
+$i \in \brs{m}$
+קיים
+$j_i \in [k]$
+כך שמתקיים
+\[\text{.} 0 \in \conv\set{u_i \tensor v_{j_i}}{i \in [m]}\]
+אז יש
+$\lambda_i \geq 0$
+המקיימות
+\begin{align*}
+\sum_{i \in [m]} \lambda_i &= 1 \\
+\text{.} \sum_{i \in [m]} \lambda_i \prs{u_i \tensor v_{j_i}} &= 0
+\end{align*}
+אבל אם נסמן
+\[I_j \ceq \set{i \in [m]}{j_i = j}\]
+נקבל
+\begin{align*}
+\text{.}  \sum_{j \in [k]} \prs{\sum_{i \in I_j} \lambda_i u_i} \tensor v_j &= \sum_{i \in [m]} \lambda_i \prs{u_i \tensor v_{j_i}} = 0
+\end{align*}
+לפי הטענה, קיים
+$w \in \mbb{R}^d$
+כך שלכל
+$j \in [k]$
+מתקיים
+\[\text{.} w = \sum_{i \in I_j} \lambda_i u_i\]
+אז
+\[w \cdot \1 = \sum_{i \in I_j} \lambda_i \cdot \prs{u_i \cdot \1} = \sum_{i \in I_j} \lambda_i\]
+ולכן
+\begin{align*}
+\frac{w}{w \cdot \1} &= \sum_{i \in I_j} \frac{\lambda_i}{w \cdot \1} \cdot u_i
+\\&= \sum_{i \in I_j} \frac{\lambda_i}{\sum_{t \in I_j} \lambda_t} u_i
+\\&\in \conv\set{u_i}_{i \in I_j}
+\end{align*}
+כנדרש.
+\end{proof}
+
+\subsection{משפט
+\textenglish{Barany}}
+
+\begin{theorem}[\text{Barany}]
+לכל
+$d \geq 1$
+יש קבוע
+$C_d > 0$
+כך שלכל
+$u_1, \ldots, u_n \in \mbb{R}^d$
+יש
+$\mcal{F} \subseteq \binom{\brs{n}}{d+1}$
+עבורה
+$\abs{\mcal{F}} > C_d \binom{n}{d+1}$
+וכך שקיימת
+\[\text{.} p \in \bigcap_{F \in \mcal{F}} \conv\set{u_i}{i \in F}\]
+\end{theorem}
+
+\begin{proof}
+נגדיר את
+$k$
+להיות השלם המקסימלי עבורו
+$\prs{k-1}\prs{d+1} + 1 \leq n$.
+כלומר,
+$k = \floor{\frac{n-1}{d+1}} + 1$.
+
+נניח כי
+$k \geq d+1$.
+לפי משפט
+\ref{theorem:tverberg}
+נחלק את
+$\brs{n}$
+לקבוצות זרות
+$I_1, \ldots, I_k$
+כך שיש
+\[\text{.} p \in \bigcap_{j \in [k]} \conv\set{u_i}_{i \in I_j}\]
+לכל בחירה
+$\alpha_1 < \ldots < \alpha_{d+1}$
+של איברים ב־%
+$\brs{k}$
+מתקיים
+\[\text{.} p \in \bigcap_{t \in \brs{d+1}} \conv\set{u_i}{i \in I_{\alpha_t}}\]
+לפי קרתיאודורי הצבעוני יש
+$d+1$
+נקודות, אחת מכל
+$\set{u_i}_{i \in I_{\alpha_t}}$
+כך ש־%
+$p$
+בקמור שלהן.
+נסמן את קבוצת האינדקסים של נקודות אלו ב־%
+$F_{\alpha}$
+כאשר
+$\alpha = \prs{\alpha_1, \ldots, \alpha_{d+1}}$.
+אם
+$\alpha \neq \beta$
+נקבל
+$F_\alpha \neq F_\beta$
+ולכן
+\[\mcal{F} \ceq \set{F_{\alpha}}{1 \leq \alpha_1 < \ldots < \alpha_{d+1} \leq k}\]
+קבוצה מגודל
+$\binom{k}{d+1}$.
+אז
+\begin{align*}
+\abs{\mcal{F}}
+&=
+\binom{k}{d+1}
+\\&=
+\binom{\floor{\frac{n-1}{d+1}} + 1}{d+1}
+\\&\geq
+\binom{\floor{\frac{n-1}{d+1}}}{d+1}
+\\&\geq
+\frac{\prs{\floor{\frac{n-1}{d+1}} - d + 1}^{d+1}}{\prs{d+1}!}
+\\&\geq \frac{\prs{\frac{n-1}{d+1} - d}^{d+1}}{\prs{d+1}!}
+\\&= \frac{\prs{n-d^2 - d - 1}^{d+1}}{\prs{d+1}^{d+1} \prs{d+1}!}
+\\&\geq \frac{n^{d+1} - \prs{d+1}\prs{d^2 + d + 1} n^d}{\prs{d+1}^{d+1} \prs{d+1}1}
+\\&= \frac{1}{\prs{d+1}^{d+1}} \brs{\frac{n^{d+1}}{\prs{d+1}!} - \frac{\prs{d+1}\prs{d^2 + d + 1}}{\prs{d+1}!} n^d}
+\\&\geq \frac{1}{\prs{d+1}^{d+1}} \prs{\binom{n}{d+1} - \lambda_d n^d}
+\\&\geq \frac{1}{2 \prs{d+1}^{d+1}} \binom{n}{d+1}
+\end{align*}
+עבור קבוע
+$\lambda_d$
+וכאשר האי־שוויון האחרון נכון עבור
+$n$
+גדול מספיק.
+נבחר
+$C_d = \frac{1}{2 \prs{d+1}^{d+1}}$.
+\end{proof}
+
+\begin{remark}
+בהינתן
+$d$
+אפשר לשאול מה הסופרמום
+$\theta_d$
+של ערכים
+$\theta$
+עבורם לכל
+$n$
+נקודות ב־%
+$\mbb{R}^d$
+יש
+$p$
+נקודות בלפחות
+$\theta \cdot \binom{n}{d+1}$
+מהסימפלקסים על ידי הנקודות.
+
+עבור
+$d \in \set{1,2}$
+ידועים הערכים של
+$\theta_d$.
+עבור
+$d > 2$
+זאת בעיה פתוחה.
 \end{remark}
 
 \backmatter

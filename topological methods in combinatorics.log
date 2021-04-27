@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.8.12)  27 APR 2021 12:28
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.8.12)  27 APR 2021 15:14
 entering extended mode
 **"./topological methods in combinatorics.tex"
 ("topological methods in combinatorics.tex"
@@ -1892,6 +1892,13 @@ Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langu
 ge=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
 ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+LaTeX Info: Redefining \rmfamily on input line 24.
+LaTeX Info: Redefining \sffamily on input line 24.
+LaTeX Info: Redefining \ttfamily on input line 24.
 )
 \tf@toc=\write6
 \openout6 = `"topological methods in combinatorics.toc"'.
@@ -2157,17 +2164,65 @@ nSansHebrew(0)/m/it/10 קבוצות קמורות ב־$\U/msb/m/n/10 R[]$ \TU/Ope
 
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
 anguage=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+File: sources/1.png Graphic file (type bmp)
+<sources/1.png>
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+File: sources/2.png Graphic file (type bmp)
+<sources/2.png>
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+File: sources/3.png Graphic file (type bmp)
+<sources/3.png>
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+File: sources/4.png Graphic file (type bmp)
+<sources/4.png>
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
 anguage=dflt;!
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 1582.
-
-LaTeX Warning: Command \u invalid in math mode on input line 1622.
-
-Missing character: There is no ̆ in font cmmi7!
+put line 1609.
 [13]
 
-LaTeX Warning: Command \u invalid in math mode on input line 1628.
+LaTeX Warning: Command \u invalid in math mode on input line 1649.
+
+Missing character: There is no ̆ in font cmmi7!
+
+LaTeX Warning: Command \u invalid in math mode on input line 1655.
 
 Missing character: There is no ̆ in font cmmi7!
 Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
@@ -2176,18 +2231,18 @@ Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langu
 ge=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
 ge=dflt;!
-Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
-ge=dflt;!
-LaTeX Info: Redefining \rmfamily on input line 1683.
-LaTeX Info: Redefining \sffamily on input line 1683.
-LaTeX Info: Redefining \ttfamily on input line 1683.
-Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
-ge=dflt;!
-Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
-anguage=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
 anguage=dflt;!
 [14]
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+LaTeX Info: Redefining \rmfamily on input line 1710.
+LaTeX Info: Redefining \sffamily on input line 1710.
+LaTeX Info: Redefining \ttfamily on input line 1710.
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
 anguage=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
@@ -2195,6 +2250,45 @@ anguage=dflt;!
 Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
 anguage=dflt;!
  [15]
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;slant=-0.15;!
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
+860.
+
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+[16]
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+LaTeX Info: Redefining \rmfamily on input line 1916.
+LaTeX Info: Redefining \sffamily on input line 1916.
+LaTeX Info: Redefining \ttfamily on input line 1916.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textenglish' on input line 1916.
+
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew/OT:script=hebr;langua
+ge=dflt;!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+Missing character: There is no ‎ in font Open Sans Hebrew Bold/OT:script=hebr;l
+anguage=dflt;!
+
+[18]
 \tf@thm=\write7
 \openout7 = `"topological methods in combinatorics.thm"'.
 
@@ -2248,30 +2342,30 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1769.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1769.
- ("topological methods in combinatorics.aux"
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2030.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2030.
+ ("topological methods in combinatorics.aux" Setting \if@calendar@hebrew
+Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 32.
 LaTeX Info: Redefining \sffamily on input line 32.
 LaTeX Info: Redefining \ttfamily on input line 32.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1769.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1769.
+ Setting \if@calendar@hebrew
+Setting \if@calendar@hebrew)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2030.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2030.
 
 Package rerunfilecheck Info: File `"topological methods in combinatorics".out' 
 has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1769.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2030.
  ) 
 Here is how much of TeX's memory you used:
- 35017 strings out of 414493
- 713547 string characters out of 2903263
+ 35081 strings out of 414493
+ 714477 string characters out of 2903263
  1252551 words of memory out of 3000000
- 51578 multiletter control sequences out of 15000+200000
- 538050 words of font info for 92 fonts, out of 3000000 for 9000
+ 51632 multiletter control sequences out of 15000+200000
+ 538346 words of font info for 96 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  68i,19n,86p,1312b,637s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on topological methods in combinatorics.pdf (19 pages).
+Output written on topological methods in combinatorics.pdf (22 pages).
