@@ -690,7 +690,7 @@ $\abs{G} \leq d+1$
 \[\text{.} \bigcap_{K \in \mcal{K}} K \neq \ns\]
 \end{theorem}
 
-\begin{theorem}
+\begin{proof}
 נניח בשלילה שלא כל הקבוצות ב־%
 $\mcal{K}$
 נחתכות. נבחר
@@ -749,7 +749,7 @@ $i \in J_1, j \in J_2$
 $p \in \bigcap_{i \in [m]} K_i$,
 בסתירה למינימליות
 $m$.
-\end{theorem}
+\end{proof}
 
 \subsection{שימושים למשפט הלי}
 
@@ -1912,7 +1912,7 @@ $j \in [k]$
 כנדרש.
 \end{proof}
 
-\subsection{משפט
+\subsection{משפט הנקודה הכבדה של
 \textenglish{Barany}}
 
 \begin{theorem}[\text{Barany}]
@@ -2025,6 +2025,172 @@ $\theta_d$.
 $d > 2$
 זאת בעיה פתוחה.
 \end{remark}
+
+%TODO 28.4
+
+\subsection{רשתות
+$\eps$
+חלשות}
+
+תהי
+$\mcal{K}$
+משפחה של קבוצות מדידות במרחב הסתברות
+$\prs{\Omega, B, \mu}$.
+נעיין בקבוצה
+\[\text{.} A_{\eps} \ceq \set{K \in \mcal{K}}{\mu\prs{K} \geq \eps}\]
+נרצה למצוא
+$S \subseteq \Omega$
+מגודל מינימלי כך ש־%
+$S \cap K \neq \ns$
+לכל
+$K \in A_\eps$.
+
+\begin{example}
+יהי
+$\Omega = \mbb{R}$
+עם מידת הסתברות
+$\mu$
+המתוארת באופן הבא.
+יהיו
+$u_1 \leq \ldots \leq u_n$
+נקודות ב־%
+$\mbb{R}$.
+נגדיר
+\begin{align*}
+\mu \ceq \frac{1}{n} \sum_{i \in [n]} \delta_{u_i}
+\end{align*}
+כאשר
+$\delta_{u_i}$
+מידת דיראק של
+$u_i$.
+נשאל האם יש
+$S \subseteq \Omega$
+סופית מגודל קטן מ־%
+$f\prs{\eps}$
+עבור
+$f\prs{\eps}$
+קבוע כלשהו התלוי באפסילון וכך שכל
+$K \in A_\eps$
+חותכת את
+$S$.
+
+תהי
+\[\text{.} S = \set{u_{i \floor{\eps n}}}{i \in \floor{\frac{1}{\eps}}}\]
+אז לכל קטע
+$K$
+עם
+$\mu\prs{K} \geq \eps$
+מתקיים
+$K \cap S \neq \ns$.
+אבל גם
+$\abs{S} \leq \floor{\frac{1}{\eps}}$.
+\end{example}
+
+\begin{theorem}
+תהא
+$\mu$
+מידת הסתברות דיסקרטית על
+$\mbb{R}^d$
+הנקבעת על ידי
+$\set{u_i}_{i \in [n]} \subseteq \mbb{R}^d$
+ו־%
+\[\text{.} \mu\prs{A} = \frac{1}{n} \abs{\set{i}{u_i \in A}}\]
+תהא
+$\mcal{K}$
+משפחת הקבוצות הקמורות ב־%
+$\mbb{R}^d$.
+אז יש
+$S \subseteq \mbb{R}^d$
+עם
+$\abs{S} \leq \lambda_d \cdot \prs{\frac{1}{\eps}}^{d+1}$
+עבורה
+$S \cap K \neq \ns$
+לכל
+$K$
+המקיימת
+$\mu\prs{K} \geq \eps$.
+\end{theorem}
+
+\begin{proof}
+לכל
+$K \in \mcal{K}$
+עבורה
+$\mu\prs{K} \geq \eps$
+תהא
+$I_K \ceq \set{i}{u_i \in K}$.
+אז
+$\abs{I_k} \geq \eps n$.
+לפי משפט הנקודה הכבדה, יש
+$\mcal{F}_K \subseteq \binom{I_k}{d+1}$
+עם
+\[\abs{\mcal{F}_K} \geq c_d \cdot \binom{\abs{I_k}}{d+1} \geq c_d \binom{\eps n}{d+1}\]
+וכך שקיימת
+\[\text{.} p_K \in \bigcap_{F \in \mcal{F}_K} \conv\set{u_i}_{i \in F}\]
+נבחר משפחה מקסימלית
+$K_1, \ldots, K_r$
+מתוך ה־%
+$K \in \mcal{K}$
+המקיימות
+$\mu\prs{K} \geq \eps$
+כך ש־%
+$\mcal{F}_{K_1}, \ldots, \mcal{F}_{K_r}$
+זרות בזוגות.
+
+אז
+\begin{enumerate}
+\item $S = \ceq \set{p_{K_1}, \ldots, p_{K_r}}$
+מקיימת
+$S \cap K \neq \ns$
+לכל
+$K \in \mcal{K}$
+עבורה
+$\mu\prs{K} \geq \eps$:
+
+תהא
+$K$
+כזאת. אז ממקסימליות
+$K_1, \ldots, K_r$
+נובע שקיים
+$i \in \brs{r}$
+עבורו
+$\mcal{F}_K \cap \mcal{F}_{K_i} \neq \ns$.
+אז קיימת
+$F \in \mcal{F}_K \cap \mcal{F}_{K_i}$.
+כעת,
+$\set{u_j}{j \in F} \subseteq K \cap K_i$.
+לכן
+\[\text{.} p_{K_i} \in \conv\set{u_j}{j \in F} \subseteq K\]
+
+\item נותר להראות ש־%
+$r$
+תלוי ב־%
+$\eps$
+בלבד.
+מתקיים
+\begin{align*}
+\bigsqcup_{i \in [r]} \mcal{F}_{K_i} \subseteq \binom{\brs{n}}{d+1}
+\end{align*}
+לכן
+\[\text{.} \sum_{i \in [r]} \abs{\mcal{F}_{K_i}} \\leq \binom{n}{d+1}\]
+אבל
+\[r \cdot c_d \binom{\floor{\eps} n}{d+1} \leq \sum_{i \in [r]} \abs{\mcal{F}_{K_i}} \leq \binom{n}{d+1}\]
+ולכן
+\begin{align*}
+r &\leq \frac{\binom{n}{d+1}}{c_d \binom{\floor{\eps}n}{d+1}}
+\\&\leq \frac{\frac{n^{d+1}}{\prs{d+1}!}}c_d \frac{\prs{\prs{\eps n  - d}^{d+1}}}{\prs{d+1}!}
+\\&= \frac{1}{c_d} \prs{\frac{n}{\eps n - d}}^{d+1}
+\\ \text{.} \hphantom{r} &\xrightarrow{n\to\infty} \frac{1}{c_d} \prs{\frac{1}{\eps}}^{d+1}
+\end{align*}
+\end{enumerate}
+\end{proof}
+
+\chapter{פיאונים}
+
+%TODO
+
+\begin{comment}
+
+\end{comment}
 
 \backmatter
 \end{document}
