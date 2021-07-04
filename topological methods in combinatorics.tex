@@ -7,7 +7,7 @@
 \let\bs\blacksquare
 
 \title{סיכומי הרצאות לשיטות טופולוגיות בקומבינטוריקה (פיאונים קמורים) \\ \large{אביב 2021, הטכניון}}
-\author{הרצאותיו של פרופ' רועי משולם \\ \large סוכמו על ידי אלעד צורני}
+\author{הרצאותיו של פרופ' רועי משולם \\ \large רשימות על ידי אלעד צורני}
 \date{\today}
 
 \begin{document}
@@ -31,7 +31,7 @@
 \textenglish{\href{mailto:tzorani.elad@gmail.com}{tzorani.elad@gmail.com}}.\\
 אלעד צורני.
 
-\section*{ספרות מומלצת.} %TODO edit
+\section*{ספרות מומלצת.}
 \addcontentsline{toc}{section}{ספרות מומלצת} %\markboth{Course Literature}{}
 
 הספרות המומלצת עבור הקורס הינה כדלהלן.
@@ -2026,7 +2026,7 @@ $d > 2$
 זאת בעיה פתוחה.
 \end{remark}
 
-%TODO 28.4
+%date 28.4
 
 \subsection{רשתות
 $\eps$
@@ -2186,11 +2186,2179 @@ r &\leq \frac{\binom{n}{d+1}}{c_d \binom{\floor{\eps}n}{d+1}}
 
 \chapter{פיאונים}
 
+\section{(קו)הומולוגיה}
+
+\subsection{קוהומולוגיה}
+
+לפעמים נרצה לפתור מערכת משוואות כאשר מימד מרחב הפתרונות אינסופי. נרצה הרבה פעמים לסנן את הפתרונות הטריוויאליים ולהישאר עם פתרונות אמיתיים.
+
+\begin{example}
+יהי
+$\Omega \subseteq \mbb{R}^2$
+תחום פתוח.
+נחפש את אוסף השדות הוקטוריים
+\[F\prs{x,y} = \prs{P\prs{x,y}, Q\prs{x,y}}\]
+על
+$\Omega$:
+\[\text{.} W \ceq \set{\prs{P,Q}}{\frac{\del Q}{\del x} = \frac{\del P}{\del y}}\]
+זה מרחב וקטורי מעל
+$\mbb{R}$.
+
+בעצם, יש כאן הרבה פתרונות טריוויאליים. מתקיים
+\[\text{.} W \ceq \set{\prs{P,Q}}{\nabla \times \prs{P,Q} = 0}\]
+אז
+$W$
+מכיל את כל השדות המשמרים,
+$\prs{P,Q} = \nabla g$.
+כלומר, אם
+$P = \frac{\del g}{\del x}$
+וגם
+$Q = \frac{\del g}{\del y}$
+אז
+\[\text{.} \frac{\del Q}{\del x} - \frac{\del P}{\del y} = \frac{\del^2 g}{\del x \del y} - \frac{\del^2 g}{\del y \del x} = 0\]
+
+נגדיר
+\[W_0 \ceq \set{\nabla g}{\text{$g\prs{x,y}$ is smooth on $\omega$}}\]
+ונקרא לאלו הפתרונות הטריוויאליים. נרצה לשאול האם יש פתרונות שאינם טריוויאליים.
+לכל
+$\Omega$
+כזה מתקיים
+$W_{0,\Omega} \subseteq W_\Omega$.
+
+\begin{itemize}
+\item אם
+$\Omega = \mbb{R}^2$
+אין פתרונות נוספים.
+
+\item אם
+$\Omega = \mbb{R}^2 \setminus \set{0,0}$
+אז
+$W_{0,\Omega} \neq W_{\Omega}$.
+אכן,
+\[\prs{P,Q} = \frac{\prs{-y,x}}{x^2 + y^2}\]
+אינו מהצורה
+$\nabla g$.
+אם הוא היה, עבור
+$\gamma\prs{t} = \prs{\cos t, \sin t}$
+היינו מקבלים
+\begin{align*}
+0 &= g\prs{\gamma\prs{2 \pi}} - g\prs{\gamma\prs{0}}
+\\&=
+\int_\gamma \nabla g
+\\&=
+\int_\gamma P \diff x + Q \diff y
+\\&=
+\int_\gamma \frac{-y \diff x + x \diff y}{x^2 + y^2}
+\\&= 2 \pi
+\end{align*}
+בסתירה.
+\end{itemize}
+\end{example}
+
+\begin{definition}[קוהומולוגיה ראשונה]
+מרחב הפתרונות "שאינם טריוויאליים" הוא
+$H^1\prs{\Omega, \mbb{R}} \ceq W_\Omega/W_{0,\Omega}$.
+נקרא למרחב זה
+\emph{הקוהומולוגיה הראשונה של
+$\Omega$}
+עם מקדמים ב־%
+$\mbb{R}$.
+כאן
+$\dim H^1\prs{\Omega, \mbb{R}}$
+יהיה מספר ה"חורים" ב־%
+$\Omega$.
+\end{definition}
+
+\begin{example}
+במקרה ש־%
+$\Omega$
+קבוצה דיסקרטית מגודל
+$3$
+נקבל
+$\dim H^1\prs{\Omega, \mbb{R}}$.
+\end{example}
+
+\subsection{הומולוגיה}
+
+עבור מרחב טופולוגי
+$X$
+ושדה
+$\mbb{F}$
+נרצה להגדיר חבורות הומולוגיה
+$H_k\prs{X;\mbb{F}}$
+שמתאר את החורים ה־%
+$k$%
+־מימדיים ב־%
+$X$.
+
+\begin{definition}[קומפלקס סימפליציאלי מופשט]
+\emph{קומפלקס סימפליציאלי מופשט}
+הוא קבוצת קודקודים
+$V$
+וקבוצה
+$X \subseteq \mcal{P}\prs{V}$
+עבורה אם
+$\sigma \in X$
+וגם
+$\tau \subseteq \sigma$
+אז
+$\tau \in X$.
+נגדיר את המימד של
+$X$
+להיות
+\[\dim X \ceq \max\set{\dim \sigma}{\sigma \in X}\]
+כאשר
+$\dim \sigma \ceq \abs{\sigma} - 1$.
+\end{definition}
+
+\begin{definition}[סימפלקס גיאומטרי]
+\emph{סימפלקס גיאומטרי}
+ממימד
+$k$
+הוא קבוצה מהצורה
+$\conv\set{u_0, \ldots, u_k}$
+כאשר
+$u_0, \ldots, u_k$
+בלתי־תלויים אפינית.
+\end{definition}
+
+\begin{definition}[קומפלקס סימפליציאלי גיאומטרי]
+\emph{קומפלקס סימפליציאלי גיאומטרי}
+הוא אוסף
+$Y$
+של סימפלקסים גיאומטריים ב־%
+$\mbb{R}^N$
+כך שמתקיימות התכונות הבאות.
+\begin{enumerate}
+\item אם
+$\sigma \in Y$
+ו־%
+$\tau \leq \sigma$
+פאה של
+$\sigma$
+אז
+$\tau \in Y$.
+\item אם
+$\sigma_1, \sigma_2 \in Y$
+אז
+$\sigma_1 \cap \sigma_2$
+פיאה (אולי ריקה) של
+$\sigma_1, \sigma_2$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[מימוש של קומפלקס סימפליציאלי מופשט]
+קומפלקס סימפליציאלי גיאומטרי
+$Y$
+עם קבוצת קודקודים
+$u_1, \ldots, u_m$
+הוא
+\emph{מימוש גיאומטרי של קומפלקס סימפליציאלי מופשט
+$X$
+עם קבוצת קודקודים
+$v_1, \ldots, v_m$}
+אם קיימת העתקה
+\begin{align*}
+\phi \colon \set{u_i}{i \in [m]} \to \set{x_i}{i \in [m]} \\
+v_i &\mapsto u_i
+\end{align*}
+עבורה
+$\set{u_{i_0}, \ldots, u_{i_k}} \in X$
+אם ורק אם
+$\conv\prs{u_{i_0}, \ldots, u_{i_k}} \in Y$.
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item לגרף
+$K_4$
+יש מימוש ב־%
+$\mbb{R}^2$.
+המרחב באיור
+%TODO add fig 1.1
+אינו מימוש כיוון שחיתוך שני האלכסונים אינו סימפלקס.
+המרחב באיור
+%TODO add fig 1.2
+לעומת זאת הוא אכן שיכון גיאומטרי.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/1.1}
+\caption{קומפלקס שלא ניתן לקבל כעצב של קבוצת קטעים במישור.}
+\label{figure:1.1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{sources/1.2}
+\caption{קומפלקס שלא ניתן לקבל כעצב של קבוצת קטעים במישור.}
+\label{figure:1.2}
+\end{figure}
+
+\item לגרף
+$K_5$
+אין מימוש ב־%
+$\mbb{R}^2$,
+אבל יש מימוש ב־%
+$\mbb{R}^3$.
+למעשה, כל גרף אפשר לממש ב־%
+$\mbb{R}^3$.
+\end{enumerate}
+\end{example}
+
+\begin{proposition}
+יהי
+$X$
+קומפלקס סימפליציאלי אבסטרקטי על קבוצת קודקודים
+$\brs{n}$
+ונניח כי
+$\dim X = d$.
+אזי, יש ל־%
+$X$
+מימוש גיאומטרי ב־%
+$\mbb{R}^{2d + 1}$.
+\end{proposition}
+
+\begin{proof}
+נבחר
+$u_1, \ldots, u_m \in \mbb{R}^{2d+1}$
+שהן במצב כללי אפיני, כלומר כל
+$2d + 2$
+מהן בלתי־תלויות אפינית. למשל, אם
+$d=1$,
+כל
+$4$
+קודקודים יוצרים טטרהדר לא־מנוון.
+
+באופן כללי, ב־%
+$\mbb{R}^N$
+יש סדרה (אינסופית) של נקודות
+$u_1, u_2, \ldots$
+שכל
+$N+1$
+מהן בלתי־תלויות אפינית. (למשל
+$u_j = \prs{j, j^2, \ldots, j^N}$
+סדרה כזאת)
+נניח שמצאנו את
+$u_1, \ldots, u_n$
+שהן במצב כללי אפיני.
+יש
+$\binom{n}{N}$
+מרחבים אפיניים שנפרשים אפינית על ידי
+$N$
+מתוך ה־%
+$\prs{u_i}_{i \in [n]}$,
+ולכן אפשר לבחור
+$u_{m+1}$
+שאינה באף אחד מהם.
+
+\emph{המימוש הגיאומטרי של
+$X$}
+הוא הקומפלקס הגיאומטרי
+$Y$
+שסימפלקסיו הם
+$\conv\set{u_{i_0}, \ldots, u_{i_p}}$
+לכל
+$\prs{i_0, \ldots, i_p} \in X$.
+
+ניתן אז להראות כי
+$Y$
+מקיים את הדרישות.
+\end{proof}
+
+\begin{definition}[מימוש גיאומטרי של קומפלקס גיאומטרי]
+עבור קומפלקס גיאומטרי
+$Y$
+נגדיר את
+\emph{המימוש הגיאומטרי שלו}
+על ידי
+\[\text{.} \abs{Y} = \bigcup_{\sigma \in Y} \sigma\]
+\end{definition}
+
+\begin{proposition}
+יהי
+$X$
+קומפלקס סימפליציאלי אבסטרקטי עם
+$Y_1, Y_2$
+מימושים גיאומטריים של
+$X$.
+אז
+$\abs{Y_1} \cong \abs{Y_2}$.
+\end{proposition}
+
+\begin{proof}
+תהי
+$X \subseteq \mcal{P}\prs{\brs{n}}$
+ויהיו
+$Y_1, Y_2$
+מימושים על קודקודים
+$u_1, \ldots, u_n \in \mbb{R}^{N_1}$
+ו־%
+$v_1, \ldots, v_n \in \mbb{R}^{N_2}$.
+נגדיר
+$\phi \colon Y_1 \to Y_2$
+על ידי
+$\phi\prs{u_i} = v_i$
+ואם
+$y \in \abs{Y_1}$
+נכתוב
+\begin{align*}
+\sum_{j = 0}^p \lambda_j u_{i_j} = y \in \conv\set{u_{i_0}, \ldots, u_{i_p}}
+\end{align*}
+עבור
+$\lambda_j \geq 0$
+המקיימות
+$\sum_{j=0}^p \lambda_j = 1$
+ונגדיר
+\[\text{.} \phi\prs{y} = \sum_{j=0}^p \lambda_j v_{i_j}\]
+למשל, במקרה
+$X = \set{\set{1}, \set{2}, \set{3}, \set{1,2}, \set{1,3}}$
+ההעתקה
+$\phi \colon Y_1 \to Y_2$
+ממשיכה לינארית מהקטע בין
+$u_1, u_2$
+לקטע בין
+$v_1, v_2$.
+
+אז
+$\phi$
+הומיאומורפיזם
+$Y_1 \cong Y_2$.
+\end{proof}
+
+\begin{corollary}
+אפשר לזהות קומפלקס סימפליציאלי אפיני עם מימוש כלשהו שלו ב־%
+$\mbb{R}^N$
+עד כדי הומיאומורפיזם.
+\end{corollary}
+
+מרחבים קומפקטיים
+\textit{סבירים}
+ניתן לשלש במובן שהם הומיאומורפיים לקומפלקסים סימפליציאליים סופיים.
+
+\begin{notation}
+נסמן
+$\Delta_{n-1} = 2^{\brs{n}}$
+כסימפלקס על
+$\brs{n}$.
+\end{notation}
+
+\begin{notation}[השלד ה־%
+$k$%
+־מימדי]
+\emph{השלד ה־%
+$k$%
+־מימדי של
+$\Delta_{n-1}$}
+הוא
+\[\text{.} \Delta_{n-1}^{\prs{k}} \ceq \set{\sigma \in \Delta_{n-1}}{\dim \sigma \leq k}\]
+\end{notation}
+
+\begin{example}
+הספירה
+$S^n$
+ניתנת לשילוש.
+לכל
+$n \in \mbb{N}_+$
+מתקיים
+\[\text{.} S^{n-2} \cong \Delta_{n-1}^{\prs{n-2}}\]
+\end{example}
+
+\begin{example}
+אפשר לשלש גם את הטורוס
+$S^1 \times S^1$.
+נסתכל על הטורוס כהדבקה של ריבוע על הצלעות. ניתן לחלק אותו באופן
+%TODO add fig 1.3
+\end{example}
+
+\subsubsection{הגדרת הומולוגיה סימפליציאלית}
+
+יהי
+$X$
+קומפלקס סימפליציאלי (אבסטרקטי) על קודקודים
+$V$
+ונניח כי
+$V$
+קבוצה סדורה לינארית.
+יהי
+$X\prs{k}$
+אוסף הפיאות ה־%
+$k$%
+־מימדיות של
+$X$.
+יהי
+$X^{\prs{k}} \ceq \set{\sigma \in X}{\dim \sigma \leq k}$
+\emph{השלד ה־%
+$k$%
+־מימדי של
+$X$}.
+נייצג פיאה
+$k$%
+־מימדית
+$\set{v_0, \ldots, v_k}$
+על ידי קבוצה סדורה
+$\brs{v_0, \ldots, v_k}$
+כאשר
+$v_0 < \ldots < v_k$.
+
+\begin{definition}
+יהי
+$\mbb{F}$
+שדה. נגדיר את
+$C_n\prs{X,\mbb{F}}$
+להיות המרחב הוקטורי מעל
+$\mbb{F}$
+הנפרש על ידי הסימלפקסים
+$\brs{v_0, \ldots, v_k} \in X\prs{k}$.
+\end{definition}
+
+\begin{example}
+יהי
+$X$
+כבאיור
+%TODO add fig 1.4
+
+אז למשל
+\[17 \brs{1} + 5 \brs{3} - 2 \brs{4} \in C_0\prs{X,\mbb{F}}\]
+והמרחב
+$C_k\prs{X}$
+ממימד
+$\abs{X\prs{k}}$.
+למשל גם
+$1 \cdot \brs{3,4} + \prs{-1}\brs{2,3}$.
+\end{example}
+
+\begin{remark}
+כרגע, נסתכל רק על סימפלקסים
+$\brs{v_0, \ldots, v_k}$
+כאשר
+$v_0 < v_1 < \ldots < v_k$.
+בהמשך נתייחס גם לשינוי סדר של זה.
+\end{remark}
+
+\begin{definition}
+נסמן
+$\brs{\ns} = *$
+ונגדיר
+\[\text{.} C_{-1} \prs{X} = \mbb{F} \cdot * \cong \mbb{F}\]
+\end{definition}
+
+\begin{definition}[העתקת שפה]
+עבור
+$k \geq 1$
+נגדיר את
+\emph{העתקת ה־%
+$k$%
+־שפה}
+\[\del_k \colon C_k\prs{X} \to C_{k-1} \prs{X}\]
+על איברי הבסיס על ידי
+\[\delta_k \prs{\brs{v_0, \ldots, v_k}} = \sum_{j=0}^k \prs{-1}^j \brs{v_0, \ldots, \hat{v}_j, \ldots, v_k}\]
+כאשר
+$\hat{v}_j$
+סימון לכך שזה איבר שמושמט מהביטוי.
+\end{definition}
+
+\begin{example}
+נסתכל על הסימלפקס
+$\brs{v_0, v_1}$.
+אז
+\[\text{.} \del_1\prs{\brs{v_0, v_1}} = \sum_{j=0}^1 \prs{-1}^j \brs{v_0, \ldots, \hat{v}_j, v_1} = \brs{v_1} - \brs{v_0}\]
+\end{example}
+
+\begin{example}
+נסתכל על
+$\brs{v_0, v_1, v_2}$.
+אז
+\begin{align*}
+\text{.} \del_2 \prs{\brs{v_0, v_1, v_2}} = \brs{v_1, v_2} - \brs{v_0, v_2} + \brs{v_0, v_1}
+\end{align*}
+ניתן לחשוב על כך כבאיור
+%TODO 1.5
+\end{example}
+
+\begin{definition}[$k$%
+־מחזורים]
+נסמן
+\[\text{.} Z_k\prs{X} \ceq \set{c \in C_k\prs{X}}{\del_k c = 0}\]
+\end{definition}
+
+\begin{example}
+נסתכל על איור
+%TODO 1.6
+מתקיים
+\begin{align*}
+\del_2\prs{\brs{1,2,3}}
+&=
+\del_1\prs{\brs{1,2} + \brs{2,3} - \brs{1,3}}
+\\&= \del_1\brs{1,2} + \del_1 \brs{2,3} - \del_1\brs{1,3}
+\\&= \prs{\brs{2} - \brs{1}} + \prs{\brs{3} - \brs{2}} - \prs{\brs{3} - \brs{1}}
+\\ \text{.} \hphantom{\del_!\prs{\brs{1,2} + \brs{2,3} - \brs{1,3}}} &= 0
+\end{align*}
+וניתן לראות כי
+$Z_1\prs{X}$
+הוא מעגלים מכוונים בקומפלקס.
+\end{example}
+
+\begin{example}
+נסתכל על
+$X$
+שילוש של
+$\mbb{T} = S^1 \times S^1$.
+אז
+\[\del_2 \prs{\sum_{\sigma \in X\prs{2}} \sigma} = 0\]
+כיוון שכל צלע תופיע פעמיים בסימנים הפוכים, וכאשר הסימפלקסים באוריינטציה תואמת.
+%TODO add 1.7
+
+ניתן בדוגמא זאת לראות גם שמתקיים
+$\del_l \circ \del_{k+1} = 0$.
+זה בעצם מתקיים באופן כללי יותר.
+\end{example}
+
+\begin{proposition}
+$\del_k \circ \del_{k+1} = 0$
+לכל
+$k \in \mbb{N}$.
+\end{proposition}
+
+\begin{proof}
+מתקיים
+\begin{align*}
+\del_k \del_{k+1} \brs{v_0, \ldots, v_{k+1}}
+&=
+\del_k \sum_{i = 0}^{k+1} \prs{-1}^i \brs{v_0, \ldots, \hat{v}_i, \ldots, v_{k+1}}
+\\&=
+\sum_{i=0}^{k+1} \prs{-1}^i \del_k \brs{v_0, \ldots, \hat{v}_i, \ldots, v_{k+1}}
+\\&=
+\sum_{i = 0}^{k+1} \prs{-1}^i \prs{\sum_{j = 0}^{i-1} \prs{-1}^j \brs{v_0, \ldots, \hat{v}_j, \ldots, \hat{v}_i, \ldots, v_{k+1}}
++
+\sum_{j = i+1}^{k+1} \prs{-1}^{j-1} \brs{v_0, \ldots, \hat{v}_i, \ldots, \hat{v}_j, \ldots, v_{k+1}}}
+\\&=
+\sum_{\substack{\prs{i,j} \in [k+1]^2 \\ j < i}} \prs{-1}^{i+j} \brs{v_0, \ldots, \hat{v}_j, \ldots, \hat{v}_i, \ldots, V_{k+1}}
++
+\sum_{\substack{\prs{i,j} \in [k+1]^2 \\ j > i}} \prs{-1}^{i+j-1} \brs{v_0, \ldots, \hat{v}_i, \ldots, \hat{v}_j, \ldots, V_{k+1}}
+\end{align*}
+אבל אם נחליף את האינדקסים
+$i,j$
+נראה כי הביטוי שווה לעצמו כפול
+$\prs{-1}$,
+ולכן שווה
+$0$.
+\end{proof}
+
+\begin{notation}
+תחת הסימון
+$C_{k-1}\prs{X} = \mbb{F} \cdot *$
+נסמן את העתקות השפה
+$\tilde{\del}$.
+במקרה זה נסמן
+\begin{align*}
+\tilde{Z}_k\prs{X} &= \ker\prs{\tilde{\del}_k} \\
+\text{.} \tilde{B}_k\prs{X} &= \im\prs{\tilde{\del}_{k+1}}
+\end{align*}
+עבור
+$i > 0$
+מתקיים
+$\tilde{\del}_i = \del_i$.
+\end{notation}
+
+\begin{definition}[הומולוגיה]
+נגדיר את
+\emph{ההומולוגיה של
+$X$
+עם מקדמים ב־%
+$\mbb{F}$}
+על ידי
+\[\text{.} H_k\prs{X ; \mbb{F}} \ceq \tilde{Z}_k\prs{X} / \tilde{B}_k\prs{X}\]
+\end{definition}
+
+\begin{remark}
+טופולוגית, ההומולוגיה
+$H_k\prs{X;\mbb{F}}$
+היא המרחב הנפרש על ידי ה־%
+$k$%
+־חורים "האמיתיים"
+ב־%
+$X$.
+\end{remark}
+
+\begin{example}
+מתקיים
+\[\text{.} \tilde{H}_0\prs{X} = \ker\prs{\tilde{\del}_0}/\im\prs{\del_1}\]
+כמו כן,
+\[\text{.} C_0\prs{X} = \set{\sum_{v \in V} a_V \brs{v}}{a_v \in \mbb{F}}\]
+אז
+\[\text{.} \tilde{\del}_0 \prs{\sum_{v \in V} a_v \brs{v}} = \sum_{v \in V} a_v *\]
+
+מתקיים גם
+\[\tilde{Z}_0 \prs{X} = \set{\sum_{v \in V} a_V\brs{v}}{\sum_{v \in V} a_v = 0}\]
+ו־%
+\[\text{.} \im \del_1 = \spn\set{\brs{v} - \brs{u}}{\brs{u,v} \in X\prs{1}}\]
+אז ההומולוגיה הראשונה אינה תלויה בפיאות ממימד
+$2$
+ומעלה.
+\end{example}
+
+\begin{notation}
+עבור
+$v_0 < \ldots, < v_k$
+הגדרנו
+$\brs{v_0, \ldots, v_k}$
+כיוצר של
+$C_k\prs{X}$.
+עבור תמורה
+$\pi \in S_{\set{0, \ldots, k}}$
+נסמן
+\[\text{.} \brs{v_{\pi\prs{0}}, \ldots, v_{\pi\prs{k}}} \ceq \mrm{sg}\prs{\pi} \brs{v_0, \ldots, v_k}\]
+\end{notation}
+
+\begin{example}
+במקרה של הסימפלקס ה־%
+$1$%
+־מימדי,
+$\brs{v_1, v_0} = -\brs{v_0, v_1}$.
+
+במקרה של הסימפלקס ה־%
+$2$%
+־מימדי
+$\brs{v_0, v_2, v_1} = -\brs{v_0, v_1, v_2}$.
+\end{example}
+
+\begin{example}
+נסתכל על
+$X$
+כבאיור
+%TODO add fig 1.8
+כאן
+\begin{align*}
+\tilde{Z}_0 = \set{\sum a_i \brs{v_i}}{\sum a_i = 0} \\
+\tilde{B}_0 = \trs{\brs{v_2} - \brs{v_1}, \brs{v_3} - \brs{v_1}, \brs{v_4} - \brs{v_3}, \brs{v_5} - \brs{v_1}}
+\end{align*}
+ובמקרה זה
+$\tilde{B}_0 = \tilde{Z}_0$.
+נראה כי זה נכון באופן כללי כאשר
+$X$
+קשיר כגרף.
+\end{example}
+
+\begin{proposition}
+אם
+$X$
+גרף קשיר, אז
+\[\text{.} \tilde{B}_0\prs{X} = \tilde{Z}_0\prs{X}\]
+בפרט
+\[\text{.} H_0\prs{X, \mbb{F}} = 0\]
+\end{proposition}
+
+\begin{remark}
+מתקיים
+$\brs{v_i} - \brs{v_j} \in \tilde{B}_0$
+לכל
+$i,j$.
+
+
+אפשר לקבל זאת על ידי לקיחת שפה של מסלול בין
+$v_i, v_j$.
+למשל, בדוגמא למעלה
+\[\text{.} \brs{v_4} - \brs{v_2} = \prs{\brs{v_4} - \brs{v_3}} + \prs{\brs{v_3} - \brs{v_1}} + \prs{\brs{v_1} - \brs{v_2}}\]
+\end{remark}
+
+\begin{proof}
+יהי
+$X$
+קשיר ויהי
+\[\sum_{i \in [m]} a_i \brs{v_i} \in \tilde{Z}_0\prs{X}\]
+ואז
+\[\text{.} \sum_{i \in [m]} a_i = 0\]
+אנו יודעים כי
+$\brs{v_{i+1}} - \brs{v_i} \in \tilde{B}_0\prs{X}$
+ולכן
+\begin{align*}
+\sum_{i \in [m]} a_i \brs{v_i} &= \sum_{i=2}^m \prs{\sum_{j = i}^m a_j} \prs{\brs{v_i} - \brs{v_{i-1}}}
+\\&=
+\sum_{i=2}^m \sum_{j=i}^m a_j \brs{v_i} - \sum_{i = 2}^m \prs{\sum_{j=i}^m a_j \brs{v_{i-1}}}
+\\&=
+\sum_{i=2}^m \sum_{j=i}^m a_j \brs{v_i} - \sum_{i = 1}^{m-1} \prs{\sum_{j=i+1}^m a_j \brs{v_{i}}}
+\\&=
+a_m \brs{v_m} + \sum_{i=2}^{m-1} \underset{a_i}{\underbrace{\prs{\sum_{j=i}^m a_j - \sum_{j=i+1}^m a_j}}} \brs{v_i} - \sum_{j=2}^m a_j \brs{v_1}
+\\ \text{.} \hphantom{\sum_{i \in [m]} a_i \brs{v_i}} &=
+\sum_{i \in [m]} a_i \brs{v_i}
+\end{align*}
+לכן
+$\sum_{i \in [m]} a_i \brs{v_i} \in \tilde{B}_0\prs{X}$,
+כנדרש.
+\end{proof}
+
+\begin{proposition}
+אם ל־%
+$X$
+יש
+$\ell$
+רכיבי קשירות אז
+\[\text{.} \tilde{H}_0\prs{X} \cong \mbb{F}^{\ell-1}\]
+\end{proposition}
+
+\begin{proof}
+נסמן ב־%
+$V_1, \ldots, V_\ell$
+את רכיבי הקשירות. מתקיים
+\begin{align*}
+\tilde{Z}_0\prs{X} &= \set{\sum_{v \ in V} a_V \brs{v}}{\sum_{v \in V} a_v = 0} \\
+\text{.} \tilde{B}_0\prs{X} &= \set{\sum_{v \in V} b_v\brs{v}}{\forall i \in \brs{\ell} \colon \sum_{v \in V_i} b_v = 0}
+\end{align*}
+אז
+\[\dim \tilde{Z}_0 = n-1\]
+כאשר
+$n$
+מספר הקודקודים של
+$V$,
+ומתקיים
+\[\text{.}\dim \tilde{B}_0 = \sum_{i \in \brs{\ell}} \prs{\abs{V_r} - 1} = n-\ell\]
+אז
+\[\text{,} \dim \tilde{H}_0 = \prs{n-1} - \prs{n-\ell} = \ell - 1\]
+כנדרש.
+\end{proof}
+
+%DATE 11.5
+
+\begin{theorem}
+אם
+$X_1, X_2$
+קומפלקסים סימפליציאליים ו־%
+$\abs{X_1} \cong \abs{X_2}$
+הומוטופיים אז
+\[\text{.} \forall k \in \mbb{N} \colon \tilde{H}_k\prs{x_1} = \tilde{H}_k\prs{x_2}\]
+\end{theorem}
+
+\begin{example}
+נסתכל על הסדרה
+\[\text{.} 0 \to C_0\prs{X} = \trs{\brs{v}} \xrightarrow{\del_0} C_{-1}\prs{X} = \trs{*} \to 0\]
+אז
+\[\text{.} \tilde{H}_0\prs{\mrm{pt}} = \tilde{H}_{-1}\prs{\mrm{pt}} = 0\]
+\end{example}
+
+\begin{corollary}
+אם
+$X$
+קומפלקס סימפליציאלי כוויץ אז
+$\tilde{H}_k\prs{X} = 0$
+לכל
+$k \in \mbb{N}$.
+\end{corollary}
+
+\begin{example}
+יהי
+$X = \Delta_2$
+והסימפלקס ה־%
+$2$%
+־מימדי על קודקודים
+$v_1, v_2, v_3$.
+נקבל סדרה
+\[
+\text{.}
+\begin{tikzcd}
+0 \arrow[r]& C_2 = C_2 = \trs{\brs{v_1, v_2, v_3}} \arrow[r]& C_1 = \trs{\brs{v_1, v_2}, \brs{v_2, v_3}, \brs{v_1, v_3}} \arrow[r]& C_0 = \trs{\brs{v_1}, \brs{v_2}, \brs{v_3}} \arrow[r]& C_{-1} = \trs{*} \arrow[r]& 0
+\end{tikzcd}
+\]
+
+נטען שכל ההומולוגיות שוות
+$0$.
+מתקיים
+\[\del\brs{v_1, v_2, v_3} = \brs{v_1, v_2} + \brs{v_@, v_3} + \brs{v_3, v_1} \neq 0\]
+לכן
+$\tilde{Z}_2\prs{X} = 0$
+ולכן
+$\tilde{H}_2\prs{X} = 0$.
+חישוב ישיר נותן
+\[\tilde{Z}_1\prs{X} = \spn\prs{\brs{v_1, v_2} + \brs{v_2, v_3} + \brs{v_3, v_1}}\]
+ולכן
+$\tilde{H}_1\prs{X} = 0$.
+\end{example}
+
+\begin{example}
+יהי
+$\Delta_{n-1}$
+הסימפלקס ה־%
+$\prs{n-1}$%
+־מימדי.
+הוא כוויץ ולכן
+$\tilde{H}_*\prs{A_{n-1}} = 0$.
+מתקיים
+\[\Delta_{n-1}^{\prs{k}} = \set{\sigma \in \Delta_{n-1}}{\dim \sigma \leq k}\]
+ולמשל
+$\Delta_{n-1}^{\prs{n-2}}$
+הסימפלקס ה־%
+$n-1$%
+־מימדי כאשר נתעלם מהחלק הפנימי שלו.
+\end{example}
+
+\begin{proposition}
+מתקיים
+\begin{align*}
+\dim \tilde{H}_i \prs{\Delta_{n-1}^{\prs{k}}} = \fcases{\binom{n-1}{k+1} & i = k \\ 0 & i \neq k}
+\end{align*}
+ובפרט
+\[\text{.} \dim \tilde{H}_i \prs{\Delta_{n-1}^{\prs{n-2}}} = \fcases{1 & i = n-2 \\ 0 & i \neq n-2}\]
+\end{proposition}
+
+\begin{proof}
+נעיין בקומפלקס
+\[\text{.} 0 \to C_{n-1} \prs{\Delta_{n-1}} \xrightarrow{\del_{n-1}} C_{n-2}\prs{\Delta_{n-1}} \xrightarrow{\del_{n-2}} \to \cdots \to C_{k+1}\prs{\Delta_{n-1}} \xrightarrow{\del_{k+1}} C_k\prs{\Delta_{n-1}} \xrightarrow{\del_k} C_{k-1}\prs{\Delta_{n-1}} \to \cdots\]
+נראה כי
+\[\text{.} \dim \tilde{Z}_k\prs{\Delta_{n+1}} = \binom{n-1}{k+1}\]
+נוכיח זאת באינדוקציה יורדת על
+$k$.
+
+\begin{description}
+\item[בסיס:]
+נניח כי
+$k = n-1$.
+אז
+\[\text{.} \tilde{Z}_{n-1}\prs{\Delta_{n-1}} = \tilde{H}_{n-1}\prs{\Delta_{n-1}} = 0\]
+\item[צעד:]
+נניח את הטענה עבור
+$k+1 > 0$
+ונוכיח אותה עבור
+$k$.
+נסתכל על
+\[\text{.} \cdots \to C_{k+1} \prs{\Delta_{n-1}} \to C_k\prs{\Delta_{n-1}} \to C_{k-1} \prs{\Delta_{n-1}} \to \cdots\]
+מתקיים
+$\tilde{H}_k\prs{\Delta_{n-1}} = 0$
+ולכן
+\[\text{.} \dim \im \del_{k+1} = \dim \ker \del_k = \dim \tilde{Z}_k\]
+ממשפט המימדים ומהנחת האינדוקציה נקבל
+\begin{align*}
+\dim \im \del_{k+1} &= \dim_{C_{k+1}\prs{\Delta_{n-1}}} - \dim \ker\prs{\del_{k+1}}
+\\&=
+\binom{n}{k+2} - \binom{n-1}{k+1}
+\end{align*}
+ולכן
+\begin{align*}
+\text{,} \dim Z_k\prs{\Delta_{n-1}} = \dim \im \del_{k+1} = \binom{n}{k+2} - \binom{n-1}{k+2} = \binom{n-1}{k+1}
+\end{align*}
+כנדרש.
+
+לכן
+\begin{align*}
+\dim \tilde{H}_k\prs{\Delta_{n-1}^{\prs{k}}} = \dim \tilde{Z}_k\prs{\Delta_{n-1}^{\prs{k}}} = \binom{n-1}{k+1}
+\end{align*}
+ולכל
+$i<k$
+מתקיים
+\begin{align*}
+\text{.} \tilde{H}_i \prs{\Delta_{n-1}^{\prs{k}}} = \tilde{H}_i \prs{\Delta_{n-1}} = 0
+\end{align*}
+\end{description}
+
+\end{proof}
+
+\begin{definition}[קומפלקס]
+קומפלקס סימפליציאלי נקרא
+\emph{ריק}
+אם
+$X = \set{\ns}$
+ונקרא
+\emph{\textenglish{void}}
+אם
+$X = \set{} = \ns$.
+\end{definition}
+
+\begin{definition}[מציין אוילר המצומצם]
+עבור קומפלקס סימפליציאלי
+$X$
+נגדיר את
+\emph{מציין אוילר המצומצם של
+$X$}
+להיות
+\begin{align*}
+\text{.} \tilde{\chi}\prs{X} = \sum_{i \geq -1} \prs{-1}^i \dim \tilde{H}_i\prs{X}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+נסמן ב־%
+$f = \prs{f_{-1}, f_0, f_1, \ldots}$
+את וקטור מספרי הפיאות של
+$X$.
+כלומר,
+\[\text{.} f_i\prs{X} = \abs{ \set{\sigma \in X}{\dim \sigma = i} }\]
+נניח כי
+$\ns \in X$
+ואז
+$f_{-1} = 1$.
+אז
+\[\text{.} \tilde{\chi}\prs{X} = \sum_{i \geq -1} \prs{-1}^i f_i\]
+\end{proposition}
+
+\section{חזרה לפיאונים}
+
+\begin{example}[נוסחאת אוילר]
+אם
+$X$
+שילוש של
+$S^n$
+אז
+\begin{align*}
+\sum_{i \geq -1} \prs{-1}^i f_i &= \tilde{\chi}\prs{S^n}
+\\&= \sum_{i \geq -1} \prs{-1}^i \dim \tilde{H}_i\prs{S^n}
+\\&= \prs{-1}^n \cdot 1
+\\ \text{.} \hphantom{\sum_{i \geq -1} \prs{-1}^i f_i} &= \prs{-1}^n
+\end{align*}
+אם 
+$n = 2$
+נקבל
+$-1 + f_0 - f_1 + f_2 = 1$
+ואז
+\[\text{.} f_0 - f_1 + f_2 = 2\]
+\end{example}
+
+\begin{proof}
+נניח שיש קומפלקס
+\[\text{,} 0 \to V_n \xrightarrow{\phi_n} V_{n-1} \xrightarrow{\phi_{n-1}} \cdots \to V_0 \xrightarrow{\phi_0} V_{-1} \xrightarrow{\phi_{-1}} 0\]
+כלומר שמתקיים
+$\phi_i \phi_{i+1} = 0$
+לכל
+$0 \leq i \leq n$.
+נראה כי
+\begin{align*}
+\text{.} \sum \prs{-1}^i \dim V_i
+&=
+\sum \prs{\dim \ker \prs{\phi_i} - \dim \im\prs{\phi_{i+1}}}
+\end{align*}
+במקרה שלנו
+$\phi_i = \del_i$
+וגם
+$V_i = C_i\prs{X}$
+ולכן
+\begin{align*}
+\dim \tilde{H}_i \prs{X} = \dim \ker\prs{\phi_i} - \dim \im \prs{\phi_{i+1}}
+\end{align*}
+וגם
+\[\text{,} \dim V_i = f_i\prs{X}\]
+ולכן נקבל את השוויון.
+
+נותר להראות כי מתקיים
+\begin{align*}
+\text{.} \sum \prs{-1}^i \dim V_i
+&=
+\sum \prs{\dim \ker \prs{\phi_i} - \dim \im\prs{\phi_{i+1}}}
+\end{align*}
+אכן,
+\begin{align*}
+\sum \prs{-1}^i \dim V_i
+&=
+\sum \prs{-1}^i \prs{\dim \ker\prs{\phi_i} + \dim \im \prs{\phi_i}}
+\\&=
+\sum \prs{-1}^i \dim \ker \prs{\phi_i}
++
+\sum \prs{-1}^i \dim \im \prs{\phi_i}
+\\&=
+\sum \prs{-1}^i \dim \ker\prs{\phi_i}
++
+\sum \prs{-1}^{i+1} \dim \im \phi_{i+1}
+\\&=
+\sum \prs{-1}^i \prs{\dim \ker \prs{\phi_i} - \dim \im \prs{\phi_{i+1}}}
+\end{align*}
+כאשר האינדקסים מסתדרים בשלב האחרון כי
+$\im \phi_{-1} = 0$
+וכי
+$\ker \phi_{n+1} = 0$.
+\end{proof}
+
+\begin{question}
+איך נוכל לאפיין את מספרי הפיאות של שילושים של מרחבים מסוימים, בפרט כאלה של
+$S^{d-1}$?
+\end{question}
+
+\begin{definition}
+בהינתן קומפלקס סימפליציאלי ממימד
+$\dim\prs{X} \leq d-1$
+נגדיר
+\[\text{.} F\prs{t} = \sum_{i=0}^d f_{i-1} t^{d-i}\]
+זה מקודד באמצעות פולינום את
+$f$.
+
+נגדיר
+\[\text{.} H\prs{t} = F\prs{t-1}\]
+נכתוב פולינום זה
+\[\text{.} H\prs{t} = \sum_{k=0}^d h_k t^{d-k}\]
+אז
+$h \ceq \prs{h_0, \ldots, h_d}$
+נקרא ה־%
+$h$%
+־וקטור של
+$X$.
+\end{definition}
+
+\begin{remark}
+מתקיים
+\begin{align*}
+\sum_{i=0}^d h_k t^{d-k} &= F\prs{t-1}
+\\&= \sum_{i = 0}^d f_{i-1} \prs{t-1}^{d-i}
+\\&=
+\sum_{i=0}^d f_{i-1} \sum_{j = 0}^{d-i} \prs{-1}^j \binom{d-i}{j} t^{d-i-j}
+\\&=
+\sum_{k=0}^d \prs{\sum_{i+j = k} f_{i-1} \prs{-1}^j \binom{d-i}{j}} t^{d-k}
+\\&=
+\sum_{k=0}^d \prs{\sum_{i \geq 0} f_{i-1} \prs{-1}^{k-i} \binom{d-i}{k-i}} t^{d-k}
+\\&=
+\sum_{k=0}^d \prs{\sum_{i \geq 0} f_{i-1} \prs{-1}^{k-i} \binom{d-i}{d-k}} t^{d-k}
+\end{align*}
+ואז
+\[\text{.} h_k = \sum_{i=0}^k f_{i-1} \prs{-1}^{k-i} \binom{d-i}{d-k}\]
+
+נובע כי מתקיים
+\begin{align*}
+h_0 &= 1 \\
+h_1 &= \sum_{i=0}^1 f_{i-1} \prs{-1}^{i-1} \binom{d-i}{d-k} = f_0 - d \\
+\vdots \\
+\text{.} h_d &= \sum_{i = 0}^k f_{i-1} \prs{-1}^{k-i} \binom{d-i}{0} = \sum_{i=0}^d f_{i-1}\prs{-1}^{d-i} = \prs{-1}^{d-1} \tilde{\chi}\prs{X}
+\end{align*}
+\end{remark}
+
+\begin{proposition}[נוסחאת דן־סומרויל]
+אם
+$X$
+שילוש של
+$S^{d-1}$
+אז
+\[h_k = h_{d-k}\]
+לכל
+$0 \leq k \leq d$.
+\end{proposition}
+
+\begin{remark}
+למשל, עבור
+$k=0$
+נראה כי
+$h_0 = 1$
+וכי
+\begin{align*}
+h_d &= \prs{-1}^{d-1} \tilde{\chi}\prs{X}
+\\&= \prs{-1}^{d-1} \tilde{\chi}\prs{S^{d-1}}
+\\&= \prs{-1}^{d-1} \prs{-1}^{d-1}
+\\ \text{.} \hphantom{h_d} &= 1
+\end{align*}
+אכן מתקיים
+$h_0 = h_d$.
+\end{remark}
+
+\begin{remark}
+אפשר להגדיר מרחב
+$Y$
+עבורו
+$h_i = \tilde{H}_i\prs{Y}$.
+אז נוסחאת דן־סומרויל נובעת מ־%
+\href{https://en.wikipedia.org/wiki/Poincar%C3%A9_duality}{דואליות פואנקרה}.
+\end{remark}
+
+%DATE 12.5
+
+\begin{proof}
+עבור קומפלקס סימפליציאלי
+$Y$
+ועבור
+$\sigma \in Y$
+נגדיר
+\[\text{.} \mrm{st}\prs{Y,\sigma} = \set{\tau}{\tau \cup \sigma \in Y}\]
+נגדיר גם
+\[\text{.} \mrm{lk}\prs{Y,\sigma} = \set{\tau \in \mrm{st}\prs{Y,\sigma}}{\tau \cap \sigma = \ns}\]
+
+נשים לב כי אם
+$X$
+שילוש של
+$S^{d-1}$
+אז לכל
+$\sigma \in X$
+גם
+$\mrm{lk}\prs{X,\sigma}$
+הוא שילוש של
+$S^{d-2-\dim\sigma}$.
+אז
+\[\text{.} \tilde{\chi}\prs{\mrm{lk}\prs{X,\sigma}} = \prs{-1}^{d-2-\dim \sigma}\]
+
+יהי
+$\sigma \in X$.
+אז
+\begin{align*}
+\prs{-1}^{d-2-k} &= \tilde{\chi}\prs{\mrm{lk}\prs{X,\sigma}}
+\\&= \sum_{j \geq 0} f_{j-1}\prs{\mrm{lk}\prs{X,\sigma}} \prs{-1}^{j-1}
+\\&= \sum_{j \geq 0} \set{\tau \in X}{\substack{\tau \supseteq \sigma \\ \abs{\tau} = k+1+j}}
+\end{align*}
+%TODO fill in above
+
+נסכם על כל
+$\sigma \in X\prs{k}$
+ונקבל
+\begin{align*}
+\prs{-1}^{d-2-k} f_k\prs{X} &= \sum_{\sigma \in X\prs{k}} \sum_{j \geq 0} \prs{-1}^{j-1} \abs{\set{\tau \in X\prs{k+j}}{\tau \supseteq \sigma}} \prs{-1}^{j-1}
+\\&=
+\sum_{j \geq 0} \abs{\set{\prs{\sigma,\tau} \in X\prs{k} \times X\prs{k+j}}{\sigma \subseteq \tau}} \prs{-1}^{j-1}
+\\&=
+\sum_{j \geq 0} \prs{-1}^{j-1} \sum_{\tau \in X\prs{k+j}} \binom{k+j+1}{k+1}
+\\\text{.} \hphantom{\prs{-1}^{d-2-k} f_k\prs{X}} &=
+\sum_{j \geq 0} \prs{-1}^{j-1} \binom{k+j+1}{k+1} f_{k+j}\prs{X}
+\end{align*}
+נסיק כי
+\[\text{.} \prs{-1}^{d-2-k} f_k\prs{X} = \sum_{j \geq 0} \prs{-1}^{j-1} \binom{k+j+1}{k+1} f_{k+j}\prs{X}\]
+נובע כי
+\[\text{.} \prs{-1}^{d-1} f_{k-1} = \sum_{j=k-1}^{d-1} \prs{-1}^j \binom{j+1}{k} f_j\]
+אז
+\begin{align*}
+F\prs{t} &= \sum_{k=0}^d f_{k-1} t^{d-k}
+\\&= \sum_{k=0}^d \prs{\sum_{j=k-1}^{d-1} \prs{-1}^{j-d-1} \binom{j+1}{k} f_j} t^{d-k}
+\\&= \sum_{k=0}^d \prs{\sum_{j=k}^d \prs{-1}^{j-d} \binom{j}{k} f_{j-1}} t^{d-k}
+\\&= \sum_{j=0}^d \prs{-1}^{j-d} f_{j-1} \prs{\sum_{k=0}^j \binom{j}{k} t^{j-k}} t^{d-j}
+\\&= \sum_{j=0}^d \prs{-1}^{j-d} f_{j-1} \prs{1+t}^j t^{d-j}
+\\&= \sum_{j=0}^d f_{j-1} \prs{-t}^{d-j} \prs{1+t}^j
+\\&= \prs{1+t}^{d} \sum_{j=0}^d f_{j-1} \frac{\prs{-t}^{d-j}}{\prs{1+t}^{d-j}} 
+\\&= \prs{1+t}^{d} \sum_{j=0}^d f_{j-1} \prs{\frac{-t}{1+t}}^{d-j}
+\\&= \prs{1+t}^d F\prs{\frac{-t}{1+t}}
+\\&= \prs{1+t}^d F\prs{\frac{1}{1+t} - 1}
+\\ \text{.} \hphantom{F\prs{t}}&= \prs{1+t}^d H\prs{\frac{1}{1+t}}
+\end{align*}
+מצד שני
+$F\prs{t} = H\prs{t+1}$.
+נסיק כי
+\[\text{.} H\prs{t} = t^d H\prs{\frac{1}{t}}\]
+אז
+\[\sum_{i=0}^d h_i t^{d-i} = H\prs{t} = t^d H\prs{\frac{1}{t}} = t^d \sum_{i=0}^d h_i \prs{\frac{1}{t}}^{d-i} = \sum_{i=0}^d h_i t^i = \sum_{i=0}^d h_{d-i} t^{d-i}\]
+ונקבל את הנדרש.
+\end{proof}
+
+\begin{remark}
+משפט דן סומרוויל נכון באופן כללי יותר לכל קומפלקס
+$d-1$%
+־מימדי עבורו
+\[\text{.} \tilde{\chi}\prs{\rm{lk}\prs{X,\sigma}} = \prs{-1}^{d-\dim \sigma - 2}\]
+\end{remark}
+
+\chapter{פיאונים}
+
+\begin{definition}
+עבור
+$V \subseteq \mbb{R}^d$
+סופית,
+$P \subseteq \mbb{R}^d$
+יקרא
+$V$%
+־פיאון אם
+$P = \conv\prs{V}$.
+\end{definition}
+
+\begin{example}
+הקוביה ה־%
+$d$%
+־מימדית היא
+$\conv\prs{\set{0,1}^d}$.
+\end{example}
+
+\begin{example}
+האוקטהדר ה־%
+$d$%
+־מימדי הוא
+\[\text{.} \conv\set{\pm e_i}{i \in [d]} \subseteq \mbb{R}^d\]
+זה כדור היחידה ב־%
+$\ell_1$.
+\end{example}
+
+\begin{definition}
+$P$
+יקרא
+$H$%
+־פיאון אם
+\[P = \bigcap_{i \in [n]} H_{u_i, \alpha_i}^-\]
+חסום וגם
+\[\text{.} u_i \in \mbb{R}^d \setminus \set{0}\]
+\end{definition}
+
+\begin{proposition}\label{proposition:equivalent-polytope-definitions}
+$P$
+הוא
+$V$%
+־פיאון אם ורק אם הוא
+$H$%
+־פיאון.
+\end{proposition}
+
+\begin{definition}[גוף דואלי קוטבי]
+עבור
+$C \subseteq \mbb{R}^d$
+נגדיר את הגוף הדואלי הקוטבי ל־%
+$C$
+על ידי
+\begin{align*}
+\text{.} C^* = \bigcap_{u \in C} H_{u,1}^- = \set{x}{\forall u \in C \colon x \cdot u \leq 1}
+\end{align*}
+\end{definition}
+
+\begin{example}
+אם
+$C = B\prs{0,R}$
+אז
+\begin{align*}
+\text{.} C^* &= \set{y}{\forall \abs{x} \leq R \colon y \cdot x \leq 1}
+= B\prs{0,\frac{1}{R}}
+\end{align*}
+\end{example}
+
+\begin{example}
+תהי
+$C = \brs{-1,1}^d$.
+אז
+\[\text{.} 
+C^* = \conv\set{\pm e_i}{i \in [d]}\]
+\end{example}
+
+\begin{proposition}
+\begin{enumerate}
+\item אם
+$0 \in \mrm{int}C$
+אז
+$C^*$
+חסומה.
+\item אם
+$K \subseteq \mbb{R}^d$
+קמורה וסגורה, וגם
+$0 \in K$,
+אז
+$K^{**} = K$.
+\item אם
+$K = \conv\prs{A}$
+אז
+\begin{align*}
+\text{.} K^* = \bigcap_{a \in A} H_{a,1}^-
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item%1
+אם
+$0 \in \mrm{int}\prs{C}$
+אז
+$C \supseteq B\prs{0,\eps}$
+ולכן
+\begin{align*}
+\text{.} C^* \subseteq B\prs{0,\eps}^* = B\prs{0,\frac{1}{\eps}}
+\end{align*}
+\item%2
+באופן כללי
+$K \subseteq K^{**}$
+כי אם
+$x \in K$
+וגם
+$y \in K^*$
+אז
+$y \cdot x \leq 1$
+ולכן
+$x \in K^{**}$.
+
+נניח כעת כי
+$K$
+קמורה, סגורה ומכילה את אפס. נראה כי
+$K^{**} \subseteq K$.
+יהי
+$u \in \mbb{R}^d \setminus K$.
+יהי
+$v \in \mbb{R}^d \setminus \set{0}$
+ויהי
+$\alpha \in \mbb{R}$
+עבורם
+\begin{align*}
+K &\subseteq \mrm{int} H_{v,\alpha}^- \\
+\text{.} u &\in \mrm{int} H_{v,\alpha}^+ 
+\end{align*}
+כעת
+$0 \in K$
+ולכן
+$0 = 0 \cdot v < \alpha$.
+לכל
+$z \in K$
+מתקיים
+$z \cdot v < \alpha$,
+לכן
+$z \cdot \frac{v}{\alpha} < 1$
+ולכן
+$\frac{v}{\alpha} \in K^*$.
+מצד שני,
+$v \cdot u > \alpha$,
+לכן
+$\frac{v}{\alpha} \cdot u > 1$
+ולכן
+$u \notin K^{**}$.
+
+\item%3
+נניח כי
+$K = \conv\prs{A}$.
+נרצה להראות כי
+\[\text{.} K^* = \bigcap_{u \in K} H_{u,1}^- = \bigcap_{a \in A} H_{a,1}^- = A^*\]
+מתקיים
+$K \supseteq A$
+ולכן
+$K^* \subseteq A^*$.
+נראה את הכיוון השני.
+
+תהיינה
+$u \in A^*$
+ו־%
+$z \in K$.
+אז
+\[\sum_i \lambda_i a_i\]
+ואז
+\[\text{.} z \cdot u = \sum \lambda_i a_i \cdot a \leq \sum \lambda_i = 1\]
+\end{enumerate}
+\end{proof}
+
+\begin{proof}[\ref{proposition:equivalent-polytope-definitions}]
+\begin{itemize}
+\item יהי
+$P\subseteq \mbb{R}^d$
+$H$%
+־פיאון ונכתוב
+\[\text{.} P = \bigcap_{i \in [m]} H_{u_i, \alpha_i}^-\]
+נוכיח את באינדוקציה על
+$\dim P$
+ש־%
+$P$
+הוא
+$V$%
+־פיאון.
+נניח בלי הגבלת הכלליות ש־%
+$\dim P = d$
+ואז נוכל להניח בלי הגבלת הכלליות שמתקיים
+$0 \in \mrm{int}P$.
+
+לכל
+$i \in [m]$,
+$P \cap H_{u_i, \alpha_i}$
+הוא
+$H$%
+־פיאון ממימד קטן־או־שווה
+$d-1$.
+לפי הנחת האינדוקציה
+\[F_i \ceq P \cap H_{u_i, \alpha_i} = \conv\prs{V_i}\]
+עבור
+$V_i$
+סופית.
+
+נראה כי
+$P = \conv V$
+עבור
+$V = \bigcup_{i \in [m]} V_i$.
+תהי
+$z \in P$.
+נעביר דרכה ישר שרירותי
+$\ell$
+ונסתכל על הקטע
+$\ell \cap P \ceq \brs{a,b}$.
+נשים לב כי
+\[\text{.}\del P \subseteq \bigcup_{i \in [m]} F_i = \bigcup_{i \in [m]} \prs{H_{u_i, \alpha_i} \cap P}\]
+אחרת, יש
+\[z \in P \setminus \bigcup_{i \in [m]} H_{u_i, \alpha_i}\]
+ואז
+$z \cdot u_i < \alpha_i$
+לכל
+$i$
+אבל אז
+$z \in \mrm{int}\prs{P}$
+בסתירה.
+לכן קיימים
+$i,j \in [m]$
+עבורם
+$a \in F_i$
+וגם
+$b \in F_j$.
+אז
+$a \in \conv\prs{V_i}$
+וגם
+$b \in \conv\prs{V_j}$
+ואז
+\[\text{.} z \in \conv\set{a,b} \in \conv\prs{V_i \cup V_j}\]
+
+\item
+נניח כי
+$P = \conv\prs{V}$
+עבור
+$V = \prs{v_1, \ldots, v_m}$
+סופית, ונניח בה"כ כי
+$0 \in \mrm{int}\prs{P}$.
+בפרט
+$P^*$
+חסום.
+כעת,
+\[\text{.} P^* = \bigcap_{v \in V} H_{v,1}^- = \bigcap_{i \in [m]} H_{v_i,1}^-\]
+לכן
+$P^*$
+הוא
+$H$%
+־פיאון, וממה שהראנו הוא גם
+$V$%
+־פיאון.
+אז ניתן וכתוב
+$P^* = \conv\prs{u_i}_{i \in [N]}$
+ונקבל כי
+\[\text{,} P = P^{**} = \bigcap_{j \in [N]} H_{u_j,1}^-\]
+כנדרש.
+\end{itemize}
+\end{proof}
+
+מעתה, נדבר על פיאון כללי בלי הבחנה בין
+$H$%
+־פיאון ו־%
+$V$%
+־פיאון.
+
+\begin{definition}[פאה של פיאון]
+יהי
+$P$
+פיאון.
+\emph{פאה של
+$P$}
+היא אחד מהבאים.
+\begin{enumerate}
+\item $P$.
+\item אם
+$P \subseteq H_{u,\alpha}^-$
+אז
+$H_{u,\alpha} \cap P$
+פיאה.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[נקודה קיצונית]
+$u$
+\emph{נקודה קיצונית של קבוצה קמורה
+$C$}
+אם
+$u \notin \conv\prs{C \setminus u}$.
+\end{definition}
+
+\begin{proposition}
+אם
+$C$
+פיאון אז נקודות קיצוניות של
+$C$
+הן קודקודים של
+$C$.
+\end{proposition}
+
+%19.5.21
+
+\begin{notation}
+נסמן ב־%
+$\mrm{Ext}\prs{P}$
+את קבוצת נקודות הקיצון של
+$P$
+וב־%
+$\mrm{Ver}\prs{P}$
+את קבוצת קודקודי
+$P$.
+\end{notation}
+
+\begin{proposition}
+מתקיים
+\[\text{.} \mrm{Ext}\prs{P} = \mrm{Ver}\prs{P}\]
+בפרט מתקיים
+\[\text{.} \conv \prs{\mrm{Ver}\prs{P}} = P\]
+זה מקרה פרטי של משפט
+\href{https://en.wikipedia.org/wiki/Krein%E2%80%93Milman_theorem}{קריין מילמן}.
+\end{proposition}
+
+\begin{remark}
+$p$
+נקודת קיצון
+של
+$K$
+אם ורק אם
+$K \setminus p$
+\end{remark}
+
+\begin{proof}
+תהי
+$S$
+מינימלית ביחס להכלה כך ש־%
+$\conv\prs{S} = P$.
+נראה שמתקיים
+\[\text{.} \mrm{Ver}\prs{P} \subseteq \mrm{Exp}\prs{P} \subseteq S \subseteq \mrm{Ver}\prs{P}\]
+אז נקבל
+$\mrm{Ver}\prs{P} = \mrm{Exp}\prs{P} = S$.
+
+\begin{enumerate}
+\item יהי
+$v \in \mrm{Ver}\prs{P}$.
+אז קיים
+$H_{u,\alpha}$
+עבורו
+$P \subseteq H_{u,\alpha}^-$
+וגם
+$H_{u,\alpha} \cap P = \set{v}$.
+אם
+$u_1, u_2 \in P \setminus \set{v}$
+מקיימות
+\[v = \lambda u_1 + \prs{1-\lambda} u_2\]
+אז
+\begin{align*}
+\alpha &= v \cdot u
+\\&= v \cdot \brs{\lambda u_1 + \prs{1-\lambda} u_2}
+\\&= \lambda v \cdot u_1 + \prs{1-\lambda} v \cdot u_2
+\\ \text{.} \hphantom{\alpha} &< \lambda \alpha + \prs{1-\lambda} \alpha = \alpha
+\end{align*}
+\item
+יהי
+$v \in \mrm{Exp}\prs{P}$.
+אם
+$v \notin S$
+אז
+$S \subseteq P \setminus \set{v}$.
+אבל,
+$P \setminus \set{v}$
+קמורה ואז
+\[P = \conv\prs{S} \subseteq P \setminus \set{v}\]
+בסתירה.
+\item תהי
+$s \in S$
+ונניח כי
+$s \notin \mrm{Ver}\prs{P}$.
+תהי
+$T = S \setminus \set{s}$.
+ממינימליות
+$S$
+נקבל
+$s \notin C \ceq \conv\prs{T}$.
+כעת,
+$C$
+קבוצה קמורה וקומפקטית ולכן יש על מישור
+$H$
+עבורו
+$C \subseteq \mrm{int}H^-$
+וגם
+$s \in \mrm{int}H^+$.
+יהי
+$H'$
+המקביל ל־%
+$H$
+ועובר דרך
+$s$.
+אז
+$s = H' \cap P$
+כי אם
+$x \in P$
+נוכל לכתוב
+$x = \lambda z + \prs{1-\lambda s}$
+עבור
+$z \in C$,
+אבל כאשר
+$\lambda > 0$
+נקבל
+$x \notin H'$.
+אכן, אם נכתוב
+$H' = H_{u,\alpha}$
+אז
+$u \cdot s = \alpha$,
+ואם
+$T \subseteq \mrm{int}\prs{H'}^-$
+אז
+$t \cdot u < \alpha$
+לכל
+$t \in T$;
+אז
+$z \cdot u < \alpha$
+לכל
+$z \in C$
+ואז
+\begin{align*}
+\prs{\lambda z + \prs{1-\lambda} s} \cdot u &= \lambda \prs{z \cdot u} + \prs{1-\lambda} s u
+\\&= \lambda \prs{z \cdot u} + \prs{1-\lambda}\alpha
+\end{align*}
+ואשר
+$\lambda > 0$
+נקבל כי ביטוי זה קטן מ־%
+\[\lambda \alpha + \prs{1-\lambda}\alpha = \alpha\]
+ובמקרה זה
+$\lambda z + \prs{1-\lambda} s \notin H'$.
+\end{enumerate}
+\end{proof}
+
+\subsubsection{הפיאון הציקלי}
+
+עבור
+$n,d \in \mbb{N}$
+נסמן ב־%
+$C\prs{n,d}$
+את
+\emph{הפיאון הציקלי}
+ונגדיר אותו באופן הבא.
+יהי
+\[\gamma\prs{t} = \prs{t,t^2,\ldots, t^d} \in \mbb{R}^d\]
+\emph{עקום המומנטים}%
+, עבור
+$t \in \mbb{R}$.
+יהי
+\[\text{.} \Gamma \ceq \set{\gamma\prs{t}}{t \in \mbb{R}}\]
+
+\begin{proposition}
+$\Gamma$
+במצב כללי אפיני, במובן שלכל
+$t_1 < \ldots < t_{d+1}$
+הנקודות
+$\gamma\prs{t_1}, \ldots, \gamma\prs{t_{d+1}}$
+בלתי־תלויות אפינית.
+\end{proposition}
+
+\begin{proof}
+$u_1, \ldots, u_k$
+בלתי־תלויים אפינית אם ורק אם
+$\prs{1,u_1}, \ldots, \prs{1,u_k}$
+בלתי־תלויים לינארית.
+לכן די להראות כי
+\[\prs{1, \gamma\prs{t_1}}, \ldots, \prs{1, \gamma\prs{t_{d+1}}}\]
+בלתי־תלויים לינארית.
+אז
+\begin{align*}
+\det \pmat{1 & t_1 & t_1^2 & \cdots & t_1^d \\ 1 & t_2 & t_2^2 & \cdots & t_2^d \\
+& & \vdots & & \\
+1 & t_{d+1} & t_{d+1}^2 & \cdots & t_{d+1}^d} = \prod_{i < j}\prs{t_j - t_i} \neq 0
+\end{align*}
+ולכן הוקטורים בלתי־תלויים לינארית.
+\end{proof}
+
+\begin{definition}[הפיאון הציקלי]
+עבור
+$t_1 < \ldots < t_n$
+כלשהן נגדיר
+\[\text{.} C\prs{n,d} = \conv\set{\gamma\prs{t_1}, \ldots, \gamma\prs{t_n}} \subseteq \mbb{R}^d\]
+\end{definition}
+
+\begin{proposition}\label{proposition:cyclic-polytope}
+\begin{enumerate}
+\item $C\prs{n,d}$
+פיאון סימפליצאלי, במובן שכל הפיאות שלו, חוץ מעצמו, הן סימפלקסים.
+\item $C\prs{n,d}$
+פיאון
+\emph{שכן}:
+לכל
+$I \subseteq \brs{n}$
+עבורו
+$k \ceq \abs{I} \leq \floor{\frac{d}{2}}$,
+הקבוצה
+$\conv\set{\gamma\prs{t_i}}{i \in I}$
+היא פיאה
+$\prs{k-1}$%
+־מימדית של
+$C\prs{n,d}$.
+
+במילים אחרות, לכל
+$i < \floor{\frac{d}{2}}$
+מתקיים
+\[\text{.} f_i\prs{C\prs{n,d}} = \binom{n}{i+1}\]
+
+\item עבור
+$I \subseteq \brs{n}$
+מגודל
+$d$
+הקבוצה
+$\conv\set{\gamma\prs{t_i}}_{i \in I}$
+היא פיאה
+$d-1$%
+־מימדית אם ורק אם
+$k,\ell \in \brs{n} \setminus I$
+אז
+\[\text{.} 2 \mid \abs{I \cap \prs{k,e\ll}}\]
+
+תכונה זאת נקראת תנאי הזוגיות של
+\textenglish{Gale}.
+
+\item \[h_k\prs{C\prs{n,d}} = \binom{n-d + k - 1}{k}\]
+לכל
+$k \leq \floor{\frac{d}{2}}$.
+
+\item
+\[\text{.} f_{d-1}\prs{C\prs{n,d}} = \fcases{\frac{n}{n-r} \binom{n-r}{r} & d = 2r \\ 2\binom{n-r-1}{r} & d = 2r+1}\]
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[משפט החסם העליון לפיאונים] \label{theorem:UBT}
+יהי
+$P$
+פיאון עם
+$n$
+קודקודים ב־%
+$\mbb{R}^d$.
+אזי
+$f_i\prs{P} \leq f_i\prs{C\prs{n,d}}$
+לכל
+$i \in [d-1]$.
+\end{theorem}
+
+%Lecture 18
+
+\begin{proof}[\ref{proposition:cyclic-polytope}]
+\begin{enumerate}
+\item%1
+$C\prs{n,d}$
+פיאון סימפליציאלי מפני שהקודקודים
+$\prs{\gamma\prs{t}}$
+הם במצב כללי אפיני.
+\item%2
+צריך להראות שכל
+$k+1$
+קודקודים פורשים פיאה, עבור
+$k < \floor{\frac{d}{2}}$.
+תהי
+$I \subseteq \brs{n}$
+עם
+$\abs{I} = k+1$.
+נרצה להראות כי
+$\conv\prs{\gamma\prs{t_i}}{i \in I}$
+פיאה של
+$C\prs{n,d}$.
+יהי
+\[g\prs{z} \ceq \prod_{i \in I}\prs{z-t_i}^2 = \sum_{j=0}^d a_j z^j\]
+פולינום מדרגה
+$2\abs{I} \leq d$.
+תהי
+$u = \prs{a_1, \ldots, a_d}$
+ויהי
+\[\text{.} H_{u,-a_0}^+ = \set{x \in \mbb{R}^d}{x \cdot u \geq - a_0}\]
+נטען כי
+$C\prs{n,d} \subseteq H_{u,-a_0}^+$
+וכי
+\[\text{.} \conv\set{\gamma\prs{t_i}}{i \in I} = C\prs{n,d} \cap H_{u, -a_0}\]
+
+\begin{itemize}
+\item יהי
+$t \in \mbb{R}$.
+אז
+\begin{align*}
+0 &\leq g\prs{t}
+\\&= \prod_{i \in I} \prs{t - t_i}^2
+\\&= \sum_{j=0}^d a_j t^j
+\\&= \sum_{j=1}^d a_j t^j + a_0
+\\&= u \cdot \gamma\prs{t} + a_0
+\end{align*}
+ולכן
+$\gamma\prs{t} \in H_{u, -a_0}^+$.
+\item 
+מתקיים
+\[\text{.} \conv\set{\gamma\prs{t_i}}_{i \in I} \subseteq C\prs{n,d} \cap H_{u,-a_0}\]
+מאידכך, אם
+$j \notin I$
+אז
+$g\prs{t_j} > 0$.
+אז
+$\gamma\prs{t_j} \in \int \prs{H_{u,-a_0}^+}$
+ולכן
+\[\text{.} \conv\set{\gamma\prs{t_i}}_{i \in I} = C\prs{n,d} \cap H_{u,-a_0}\]
+\end{itemize}
+
+\item%3
+
+יהיו
+$t_{i_1}, \ldots, t_{i_d}$
+עבור
+$i_1 < \ldots < i_d \in I$.
+נסתכל על
+\[f\prs{z} \ceq \prod_{j=1}^d \prs{z-t_{i_j}} = \sum_{\ell = 0}^d b_\ell z^\ell\]
+ועל
+$v \in \prs{b_1, \ldots, b_d}$.
+נעיין ב־%
+$H_{v, - b_0}$.
+מתקיים
+\[\text{.} \set{\gamma \prs{t_i}}{i \in I} = H_{v,-b_0} \cap \Gamma\]
+כעת,
+$\conv \set{\gamma\prs{t_i}}_{i \in I}$
+פיאה אם ורק אם או שלכל
+$j \notin I$
+מתקיים
+\[\gamma\prs{t_j} \in \int H_{v, -b_0}^+\]
+או שלכל
+$j \notin I$
+מתקיים
+\[\text{.} \gamma\prs{t_j} \in \int H_{v, -b_0}^-\]
+במילים אחרות זה שקול לכך שאו שלכל
+$j \in I$
+מתקיים
+$f\prs{t_j} > 0$,
+או שלכל
+$j \notin I$
+מתקיים
+$f\prs{t_j} < 0$.
+אבל, אם
+$\alpha < \beta$
+נקודות עבורן
+$f\prs{\alpha}, f\prs{\beta}$
+בעלות אותו סימן, יהיו ביניהן מספר זוגי של אפסים של
+$f$.
+
+\item%4
+
+יהי
+$k \leq \floor{\frac{d}{2}}$.
+מתקיים
+\begin{align*}
+h_k &= \sum_{=0}^k \prs{-1}^{k-i} \binom{d-i}{d-k} f_{i-1}
+\\&= \sum_{i=0}^k \prs{-1}^{k-i} \binom{d-i}{d-k} \binom{n}{i}
+\\&= \sum_{i=0}^k \prs{-1}^{k-i} \binom{d-i}{k-i} \binom{n}{i}
+\\&= \sum_{i=0}^k \prs{-1}^{k-i} \frac{\prs{d-i} \cdot \ldots \cdot \prs{d-k+1}}{\prs{k-i}!} \binom{n}{i}
+\\&= \sum_{i=0}^k \frac{\prs{k-d-1}\prs{k-d-2} \cdot \ldots \cdot \prs{i-d}}{\prs{k-i}!} \binom{n}{i}
+\\&= \sum_{i=0}^k \binom{k-d-1}{k-1} \binom{n}{i}
+\\&= \sum_{i=0}^k \binom{k-d-1}{k-1} \binom{n}{i}
+\\ \text{.} \hphantom{h_k} &= \binom{n-d+k-1}{k}
+\end{align*}
+
+\begin{remark}
+השוויון
+\[\sum_{i=0}^k \binom{u}{k-i} \binom{v}{i} = \binom{u+v}{k}\]
+שהשתמשנו בו במעבר האחרון
+מתקיים לכל
+$u,v \geq 0$
+ולכן לכל
+$u,v$
+כלשהם (גם לא שלמים).
+אכן,
+$\deg F\prs{x,y} < D$
+לכן
+$F\prs{u,v} = 0$
+לכל
+$u,v \geq 0$
+שלמים גורר כי
+$F\prs{u,v} = 0$.
+\end{remark}
+
+\item%5
+
+נחשב את
+$f_{d-1}$
+בעזרת
+$h$.
+מתקיים
+\begin{align*}
+\text{.} f_i = \sum_{j=0}^{i+1} h_j\binom{d-j}{d-i-j}
+\end{align*}
+נסמן
+$r \ceq \floor{\frac{d}{2}}$
+ונקבל
+\begin{align*}
+f_{d-1} &= \sum_{k=0}^d h_k
+\\&= \sum_{k=0}^r h_k + \sum_{k=r+1}^d h_k
+\\&\underset{\mrm{DS}} 2 \sum_{k=0}^r h_k
+\\&= 2 \sum_{k=0}^r \binom{n-d+k-1}{k}
+\\ \text{.} \hphantom{f_{d-1}} &= 2 \sum_{k=0}^r \binom{n-d+k-1}{n-d-1}
+\end{align*}
+נזכיר כי
+\[\sum_{k=0}^m \binom{u+k}{u} = \binom{u+m+1}{u+1}\]
+ולכן הביטוי האחרון שווה
+\[\text{.} 2 \sum_{k=0}^r \binom{n-d+k-1}{n-d-1} = 2 \binom{n-d-1+r+1}{n-d}\]
+נקבל כי
+\begin{align*}
+\text{.} f_{d-1} = 2 \binom{n-r-1}{n-2r-1} = 2 \binom{n-r-1}{r}
+\end{align*}
+\end{enumerate}
+\end{proof}
+
+%Lecture 19
+
+לשם הוכחת משפט
+\ref{theorem:UBT}
+נדבר על
+\emph{קילוף \textenglish{(shellability)}}
+ועל עובדה בתורת הקבוצות הסופיות.
+
+\subsubsection{קילוף}
+
+\begin{definition}
+קומפלקס
+$d-1$%
+־מימדי נקרא
+\emph{טהור}
+אם כל סימפלקס מקסימלי יחסית להכלה הוא
+$\prs{d-1}$%
+־מימדי.
+\end{definition}
+
+\begin{definition}
+קומפלקס
+$X$
+שהוא
+$\prs{d-1}$%
+־טהור
+יקרא
+\emph{קליף \textenglish{shellable}}
+אם אפשר לסדר את הפיאות המקסימליות
+$\prs{F_1, \ldots, F_t}$
+כך שיתקיים
+\[\bigcup_{j < i} \bar{F}_j \cap \bar{F}_i\]
+הוא
+$\prs{d-1}$%
+־טהור לכל
+$i$, כאשר
+$\bar{F}$
+הסימפלקס שמוגדר על ידי
+$F$.
+\end{definition}
+
+\begin{example}
+בדוגמא באיור
+%TODO add fig F.1
+לא מתואר קילוף, כי
+$v = \bar{F}_1 \cap \bar{F}_2$
+לא
+$1$%
+־מימדי.
+
+בדוגמאות באיור
+%TODO add fig F.2
+מתואר קילוף.
+\end{example}
+
+\begin{example}
+נוכל להטיל את האוקטהדר על המישור כמתואר באיור
+%TODO add fig F.3
+ואז מספור הפאות הפתואר הוא קילוף.
+\end{example}
+
+\begin{definition}
+יהי
+$X$
+קליף ממימד
+$d-1$
+ויהי
+$\prs{F_1, \ldots, F_t}$
+קילוף.
+נגדיר
+\[\text{.} R\prs{F_i} = \set{x \in F_i}{F_i \setminus \set{x} \in \bigcup_{j < i} \bar{F}_j}\]
+\end{definition}
+
+\begin{example}
+נחשב את
+$R\prs{F_i}$
+עבור איור
+%TODO ref F.3
+
+נקבל את הערכים בטבלה הבאה.
+
+\begin{center}
+\begin{english}
+\begin{tabular}{| c | c | c | c | c | c | c | c | c |}
+\hline
+$i$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ \\
+\hline
+$R\prs{F_i}$ & $\ns$ & $6$ & $5$ & $2$ & $\set{5,6}$ & $\set{2,6}$, & $\set{1,2}$ & $\set{1,2,6}$ \\
+\hline
+$\abs{R\prs{F_i}}$ & $0$ & $1$ & $1$ & $1$ & $2$ & $2$ & $2$ & $3$ \\
+\hline
+\end{tabular}
+\end{english}
+\end{center}
+\end{example}
+
+\begin{theorem}
+\begin{enumerate}
+\item
+$\prs{\brs{R\prs{F_i}, F_i}}_{i \in \brs{t}}$
+חלוקה של קבוצת הסימפלקסים ב־%
+$X$
+כאשר
+\[\text{.} \brs{\sigma, \tau} = \set{\eta}{\sigma \subseteq \eta \subseteq \tau}\]
+
+\item 
+אם
+$j < i$
+אז
+$R\prs{F_i} \nsubseteq F_j$.
+
+\item לכל
+$0 \leq k \leq d$
+מתקיים
+\[\text{.} h_k\prs{X} = \abs{\set{i \in [t]}{\abs{R\prs{F_i}} = k}}\]
+
+\item יש שקילות הומוטופית
+\[\text{.} X \cong S^{d-1} \vee S^{d-1} \vee \ldots \vee S^{d-1}\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+\item $X$
+קומפלקס טהור. אז נוכל לכתוב
+\begin{align*}
+X &= \bigcup_{i \in [t]} \bar{F}_i
+\\&= \bar{F}_1 \cup \prs{\bar{F}_1 \cup \bar{F}_2 \setminus \bar{B}_1} \cup \prs{\bar{F}_1 \cup \bar{F}_2 \cup \bar{F}_3 \setminus \bar{F}_1 \cup \bar{F}_2}
+\\ \text{.} \hphantom{X} &= \bigsqcup_{i \in \brs{t}} \prs{\bigcup_{j \leq i} \bar{F}_j \setminus \bigcup_{j < i} \bar{F}_i}
+\end{align*}
+נותר להראות שמתקיים שמתקיים
+\[\text{.} \bigcup_{j \leq i} \bar{F}_j \setminus \bigcup_{j < i} \bar{F}_j = \brs{R\prs{F_i}, F_i}\]
+
+$\sigma \in \bar{F}_i \cap \bigcup_{j < i} \bar{F}_j$
+אם קיים
+$x \in R\prs{F_i}$
+עבורו
+\[\text{.} \sigma \in F_i \setminus x \in \bigcup_{j < i} \bar{F}_i\]
+אז
+$x \notin \sigma$
+ולכן
+$R\prs{F_i} \nsubseteq \sigma$.
+אז
+$\sigma \notin \brs{R\prs{F_i}, F_i}$.
+
+בכיוון השני, נניח כי
+$\sigma \in \bar{F}_i \setminus \bigcup_{j < i} \bar{F}_j$.
+אז לכל פיאה מקסימלית
+$\tau$
+של
+$\bar{F}_i \cap \bigcap_{j < i} \bar{F}_i$
+מתקיים
+$\sigma \nsubseteq \tau$.
+אבל פיאה כזאת היא מהצורה
+$\tau = F_i \setminus x$
+עבור
+$x \in R\prs{F_i}$.
+אז
+$\sigma \nsubseteq F_i \setminus x$,
+ואז
+$x \in R\prs{F_i}$.
+נקבל כי
+$R\prs{F_i} \subseteq \sigma$,
+כנדרש.
+\item מהסעיף הקודם
+\[\text{.} R\prs{F_i} \in \bar{F}_i \setminus \bigcup_{\ell < i} \bar{F}_\ell\]
+בפרט
+$R\prs{F_i} \nsubseteq F_j$
+כאשר
+$j < i$.
+\item
+נשים לב כי
+\[f_k = \sum_{i=0}^k h_i \binom{d-i}{d-k-1}\]
+שכן
+\begin{align*}
+\sum_{k=-1}^{d-1} t^{d-k-1} &= \sum_{k=0}^d f_{k-1} t^{d-k}
+\\&= F\prs{t}
+\\&= H\prs{t+1}
+\\&= \sum_{i=0}^d h_i \prs{t+1}^{d-i}
+\\&= \sum_{i=0}^d h_i \sum_{j=0}^{d-i} \binom{d-i}{j} t^{d-i-j}
+\\&= \sum_{k=-1}^{d-1} \prs{\sum_{i+j = k+1} h_i \binom{d-i}{j}} t^{d-k-1}
+\\&= \sum_{k=-1}^{d-1} \prs{\sum_i h_i \binom{d-i}{k+1-i}} t^{d-k-1}
+\\ \text{.} \hphantom{\sum_{k=-1}^{d-1} t^{d-k-1}} &= \sum_{k=-1}^{d-1} \prs{\sum_{i=0}^{k+1} h_i \binom{d-i}{d-k-1}} t^{d-k-1}
+\end{align*}
+
+נסמן
+\[\theta_k \ceq \abs{\set{1 \leq i \leq t}{\abs{R\prs{F_i}} = k}}\]
+ונרצה להראות
+$\theta_k = h_k$
+לכל
+$0 \leq k \leq d$.
+אנו יודעים מהסעיף הראשון כי
+$\brs{R\prs{F_i}, F_i}$
+מהווים חלוקה של
+$X$.
+אז
+$f_k$
+מספר הפיאות ה־%
+$k$
+מימדיות בכל אחד מה־%
+$\brs{R\prs{F_i}, F_i}$,
+ולכן
+\begin{align*}
+f_k &= \sum_{i \in [t]} \binom{\abs{F_i} \setminus \abs{R\prs{F_i}}}{k+1 - \abs{R\prs{F_i}}}
+\\&=
+\sum_{i \in [t]} \binom{d-\abs{R\prs{F_i}}}{k+1 - \abs{R\prs{F_i}}}
+\\&=
+\sum_{j} \binom{d-j}{k+1-j} \cdot \abs{\set{i}{\abs{R\prs{F_i}} = j}}
+\\&=
+\sum_{j=0}^{k+1} \theta_j \binom{d-j}{k+1-j}
+\\&= \sum_{j=0}^{k+1} \theta_j \binom{d-j}{d-k-1}
+\end{align*}
+ואז
+\[\text{.} f_k = \sum_{i=0}^{k+1} \theta_i \binom{d-i}{d-k-1}\]
+נקבל
+$f = M\theta = Mh$
+עבור
+$M$
+מטריצה הפיכה (כמשולשית תחתונה עם
+$1$
+על האלכסון).
+לכן
+$h = \theta$.
+
+\item נסמן
+\[I \ceq \set{i}{\abs{R\prs{F_i} < d}} \ceq \set{i_1, \ldots, i_s}\]
+כאשר
+$i_\ell < i_m$
+כאשר
+$\ell < m$.
+נסמן
+$\tilde{X} = \bigcup_{i \in I} \bar{F}_i$.
+נשים לב כי
+$\prs{F_{i_1}, \ldots, F_{i_s}}$
+קילוף של
+$\tilde{X}$.
+לשם כך צריך להראות כי
+$\bigcup_{\ell < j} \bar{F}_{i_\ell} \cap \bar{F}_{i_j}$
+טהור.
+אבל
+\[\text{.} \bigcup_{\ell < j} \bar{F}_{i_\ell} \cap \bar{F}_{i_j} = \bigcup_{m < i_j} \bar{F}_m \cap \bar{F}_{i_j}\]
+ההכלה
+$\subseteq$
+קלה. בכיוון השני, כאשר
+$m < i_j$
+וגם
+$m \notin I$
+מתקיים
+$R\prs{F_m} = F_m$.
+אז
+\[\text{.} \prs{\bigcup_{i < m} \bar{F}_i}^{\prs{d-2}} = \prs{\bigcup_{i \leq m} \bar{F}_i}^{\prs{d-2}}\]
+נסמן
+$G_j \ceq F_{i_j}$.
+אז
+$\tilde{X} = \bigcup_{j \in [s]} G_j$
+ו־%
+$\prs{G_1, \ldots, G_s}$
+קילוף.
+מתקיים
+$\abs{R\prs{G_i}} < d$
+לכל
+$i \in [s]$.
+
+\begin{claim}
+יש שקילות הומוטופית
+\[\text{.} \bigcup_{j \leq i-1} \bar{G}_j \cong \bigcup_{j \leq i} \bar{G}_j\]
+\end{claim}
+
+\begin{corollary}
+מתקיים
+\[\mrm{pt} \cong \bar{G}_1 \cong \bar{G}_1 \cup \bar{G}_2 \cong \ldots \cong \bar{G}_1 \cup \ldots \cup \bar{G}_S = \tilde{X}\]
+\end{corollary}
+\end{enumerate}
+\end{proof}
+
+%Lecture 20
+
+\begin{notation}
+נסמן
+\[\text{.} \tilde{h}_k \prs{X} \ceq \sum_{i=0}^k h_i\prs{X}\]
+\end{notation}
+
+\begin{theorem}
+\begin{enumerate}
+\item $X \ceq P$
+קליף.
+\item אם
+$X$
+קומפלקס
+$d-1$
+קליף אז
+\[\text{.} \forall 0 \leq  \leq \floor{\frac{d}{2}} \colon \tilde{h}_k\prs{X} = \sum_{i=0}^k h_i\prs{X} \leq \tilde{h}_k\prs{C\prs{n,d}}\]
+\item כל
+$f_i$
+הוא צירוף אי־שלילי של ה־%
+$\tilde{h}_k$
+עבור
+$0 \leq k \leq \floor{\frac{d}{2}}$.
+\end{enumerate}
+\end{theorem}
+
 %TODO
-
-\begin{comment}
-
-\end{comment}
 
 \backmatter
 \end{document}

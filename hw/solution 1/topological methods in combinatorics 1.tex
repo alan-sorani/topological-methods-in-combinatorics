@@ -1,0 +1,68 @@
+\documentclass[10pt]{article}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+%%%%%%%%%
+% Maths %
+%%%%%%%%%
+
+\usepackage{math-fonts}
+\usepackage{math-graphics}
+\usepackage{math-symbols}
+\usepackage{math-theorems}
+
+%%%%%%%%%
+% Title %
+%%%%%%%%%
+
+\title{Homological Algebra --- Exercise Page \#1}
+\author{Elad Tzorani -- 316266477}
+\date{\today}
+
+\newcommand{\Ch}[1]{\catname{Ch}\catname{(mod-}#1\catname{)}}
+\newcommand{\Chb}[1]{\catname{Ch}_{{b}}\catname{(mod-}#1\catname{)}}
+\newcommand{\Chm}[1]{{\catname{Ch}_{{-}}\catname{(mod-}R\catname{)}}}
+\newcommand{\Chp}[1]{{\catname{Ch}_{{+}}\catname{(mod-}R\catname{)}}}
+
+\begin{document}
+
+\maketitle
+
+\begin{exercise}[2.9]
+Let $T = \prs{V,E}$ be a tree. Prove that if $T_i = \prs{V_i, E_i}$ are $m$ subtrees of $T$ such that $V_i \cap V_j \neq \ns$ for all $i,j$ then $\bigcap_{i \in [m]} V_i \neq \ns$.
+\end{exercise}
+
+\begin{solution}
+Assume towards a contradiction this isn't the case and let $n \in [m]$ be minimal such that there are $i_1, \ldots, i_n \in [m]$ for which $\bigcap_{j \in [n]} V_{i_j} = \ns$.
+
+For every $j \in [n]$ let \[x_j \in \bigcap_{\substack{j' \in [n] \\ j' \neq j}} V_{i_j}\text{,}\]
+and consider the minimal subtree $T' = \prs{V', E'}$ of $T$ that contains each $x_j$. Notice that $T'$ is finite.
+Any tree has two leaves so in particular there's $v \in V'$ of degree $1$. By minimality of $T'$ there's $j_1 \in [n]$ for which $v = x_{j_1}$. WLOS assume $j_1 = 1$.
+
+\begin{lemma}
+There's $u_1 \in V'$ closest to $x_1$ and such that $\mrm{deg}\prs{u_1} \geq 3$.
+\end{lemma}
+
+\begin{proof}
+Otherwise, $T'$ is linear so we can embed $\iota \colon T' \rmono \mbb{R}^1$. Numbering the $x_j$ such that $d\prs{x_1,x_i} > d\prs{x_1, x_j}$ for $i > j$ we may choose $\iota\prs{x_i} = i$, and send each path $x_i \to x_{i+1}$ to $\brs{i,i+1}$ with constant speed.
+
+Denote by $p_{j,k}$ the shortest path from $x_j$ to $x_k$ in $T'$. Consider \[p_{1,2}, p_{2,3}, \ldots, p_{n-1, n}, p_{n, 1}\text{.}\] Each two such paths intersect, since $p_{j,k}, p_{k,\ell}$ both contain $x_k$. Hence each two $\iota\prs{p_{j,j+1}}$ (where the indexes are considered $\mod{n}$) intersect. By Helly's theorem, all of them intersect. Hence all the $p_{j,j+1}$ intersect. For $j,k \in [n]$ take $\ell \in \brs{n} \setminus \set{j,k}$ (which we can since $n \geq 3$). We have $x_j, x_k \in V_{i_\ell}$ hence $p_{j,k} \subseteq T_{i_\ell}$ since $T_{i_\ell}$ is connected. In particular, $p_{j,j+1} \subseteq T_{i_{j-1}}$. We get
+\begin{align*}
+\ns \neq \bigcap_{j \in [n]} p_{j,j+1} \subseteq \bigcap_{j \in [n]} T_{i_j}
+\end{align*}
+hence all the $V_{i_j}$ intersect, a contradiction.
+\end{proof}
+
+Now, let $u_1 \in V'$ closest to $x_1$ and such that $\mrm{deg}\prs{u_1} \geq 3$.
+Assume first that there's $x_j$ on the path $p$ from $x_1$ to $u_1$, for $j > 1$. Then $x_1 \in V_{i_j}$ and $x_k \in V_{i_j}$ for all $k \in [n] \setminus \set{j}$. Since $x_j$ is on the path from $x_1$ to $x_k$ for any such $k$, we get $x_j \in V_{i_j}$, a contradiction.
+We get that the path $p$ from $x_1$ to $u_1$ doesn't contain any $x_j$ for $j \neq 1$. 
+
+Assume now that $u_1 \notin V_{i_1}$. Since $\mrm{deg}\prs{u_1} \geq 3$ there are different edges $\prs{u_1, f}, \prs{u_1, g}$ in $T'$. By minimality, there are $j,k \in [n]$ such that $u_1$ lies on the path from $x_j$ to $x_k$. Then, $x_j, x_k \in V_{i_1}$ so by connectedness $u_1 \in V_{i_1}$, a contradiction.
+
+We got that $u_1 \in V_{i_1}$, and we want to show \[u_1 \in \bigcap_{j \in [n]} V_{i_j}\text{,}\] which would give a contradiction.
+Let $j \in \brs{n} \setminus \set{1}$. Since $n \geq 3$ there's $k \in [n] \setminus \set{1,j}$. Then $x_1, x_k \in V_{i_j}$. By choice of $u_1$ and by connectedness of $T'$ we get $u_1 \in V_{i_j}$.
+
+\end{solution}
+
+\end{document}

@@ -1,23 +1,22 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.6.30)  4 JUL 2021 21:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.6.30)  30 JUN 2021 12:29
 entering extended mode
 **"./topological methods in combinatorics.tex"
 (topological methods in combinatorics.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-06-18>
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
-File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count178
-\c@chapter=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -45,13 +44,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
+\inf@bad=\count186
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
+\uproot@=\count187
+\leftroot@=\count188
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
+\classnum@=\count189
+\DOTSCASE@=\count190
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -60,15 +59,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
 \tag@help=\toks17
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -106,15 +105,15 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count199
-\calc@Bcount=\count266
+\calc@Acount=\count198
+\calc@Bcount=\count199
 \calc@Adimen=\dimen148
 \calc@Bdimen=\dimen149
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count267
+\calc@Ccount=\count266
 \calc@Cskip=\skip54
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
@@ -124,7 +123,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count268
+\g_MT_multlinerow_int=\count267
 \l_MT_multwidth_dim=\dimen150
 \origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen151
@@ -147,14 +146,14 @@ Package: expl3 2021-06-18 L3 programming layer (loader)
 ex.def
 File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
  ()
-\c__kernel_sys_dvipdfmx_version_int=\count269
-\l__color_backend_stack_int=\count270
-\g__color_backend_stack_int=\count271
-\g__graphics_track_int=\count272
+\c__kernel_sys_dvipdfmx_version_int=\count268
+\l__color_backend_stack_int=\count269
+\g__color_backend_stack_int=\count270
+\g__graphics_track_int=\count271
 \l__pdf_internal_box=\box53
-\g__pdf_backend_object_int=\count273
-\g__pdf_backend_annotation_int=\count274
-\g__pdf_backend_link_int=\count275
+\g__pdf_backend_object_int=\count272
+\g__pdf_backend_annotation_int=\count273
+\g__pdf_backend_link_int=\count274
 ))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
 e.sty
@@ -166,9 +165,9 @@ Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
 File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
 )) (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count276
+\integerpart=\count275
 Invalid UTF-8 byte or sequence at line 35 replaced by U+FFFD.
-\decimalpart=\count277
+\decimalpart=\count276
 Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 83 replaced by U+FFFD.
@@ -365,8 +364,8 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen164
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count278
-\c@continuedfloat=\count279
+\c@caption@flags=\count277
+\c@continuedfloat=\count278
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -374,9 +373,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count280
-\Gm@cntv=\count281
-\c@Gm@tempcnt=\count282
+\Gm@cnth=\count279
+\Gm@cntv=\count280
+\c@Gm@tempcnt=\count281
 \Gm@bindingoffset=\dimen165
 \Gm@wd@mp=\dimen166
 \Gm@odd@mp=\dimen167
@@ -402,6 +401,15 @@ rs
 \f@nch@O@orf=\skip64
 )
 \pageoffset=\skip65
+
+
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option 
+is useless on input line 114.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 130.
+
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
@@ -430,8 +438,8 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen173
-\Hy@linkcounter=\count283
-\Hy@pagecounter=\count284
+\Hy@linkcounter=\count282
+\Hy@pagecounter=\count283
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
@@ -447,7 +455,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count285
+\Hy@SavedSpaceFactor=\count284
  (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
@@ -459,7 +467,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count286
+\c@Hy@tempcnt=\count285
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
@@ -476,7 +484,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count287
+\Fld@menulength=\count286
 \Field@Width=\dimen175
 \Fld@charsize=\dimen176
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -493,9 +501,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count288
-\c@Item=\count289
-\c@Hfootnote=\count290
+\Hy@abspage=\count287
+\c@Item=\count288
+\c@Hfootnote=\count289
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
@@ -507,10 +515,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box54
-\c@Hy@AnnotLevel=\count291
-\HyField@AnnotCount=\count292
-\Fld@listcount=\count293
-\c@bookmark@seq@number=\count294
+\c@Hy@AnnotLevel=\count290
+\HyField@AnnotCount=\count291
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -620,14 +628,14 @@ filtered.code.tex
 \pgf@yd=\dimen191
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count295
-\c@pgf@countb=\count296
-\c@pgf@countc=\count297
-\c@pgf@countd=\count298
+\c@pgf@counta=\count294
+\c@pgf@countb=\count295
+\c@pgf@countc=\count296
+\c@pgf@countd=\count297
 \t@pgf@toka=\toks27
 \t@pgf@tokb=\toks28
 \t@pgf@tokc=\toks29
-\pgf@sys@id@count=\count299
+\pgf@sys@id@count=\count298
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -647,13 +655,13 @@ File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
 s-common-pdf.def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count300
+\pgfsys@objnum=\count299
 )))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count301
-\pgfsyssoftpath@bigbuffer@items=\count302
+\pgfsyssoftpath@smallbuffer@items=\count300
+\pgfsyssoftpath@bigbuffer@items=\count301
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -672,7 +680,7 @@ code.tex)
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen192
-\pgfmath@count=\count303
+\pgfmath@count=\count302
 \pgfmath@box=\box56
 \pgfmath@toks=\toks30
 \pgfmath@stack@operand=\toks31
@@ -698,7 +706,7 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count304
+\c@pgfmathroundto@lastzeros=\count303
 ))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
@@ -738,7 +746,7 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count305
+\pgf@picture@serial@count=\count304
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
@@ -773,8 +781,8 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen272
-\pgf@sys@shading@range@num=\count306
-\pgf@shadingcount=\count307
+\pgf@sys@shading@range@num=\count305
+\pgf@shadingcount=\count306
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -847,7 +855,7 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count308
+\pgf@plot@mark@count=\count307
 \pgfplotmarksize=\dimen277
 )
 \tikz@lastx=\dimen278
@@ -862,19 +870,19 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@figbox@bg=\box63
 \tikz@tempbox=\box64
 \tikz@tempbox@bg=\box65
-\tikztreelevel=\count309
-\tikznumberofchildren=\count310
-\tikznumberofcurrentchild=\count311
-\tikz@fig@count=\count312
+\tikztreelevel=\count308
+\tikznumberofchildren=\count309
+\tikznumberofcurrentchild=\count310
+\tikz@fig@count=\count311
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count313
-\pgfmatrixcurrentcolumn=\count314
-\pgf@matrix@numberofcolumns=\count315
+\pgfmatrixcurrentrow=\count312
+\pgfmatrixcurrentcolumn=\count313
+\pgf@matrix@numberofcolumns=\count314
 )
-\tikz@expandcount=\count316
+\tikz@expandcount=\count315
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -911,7 +919,7 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen289
 \pgfdecoratedinputsegmentremainingdistance=\dimen290
 \pgf@decorate@distancetomove=\dimen291
-\pgf@decorate@repeatstate=\count317
+\pgf@decorate@repeatstate=\count316
 \pgfdecorationsegmentamplitude=\dimen292
 \pgfdecorationsegmentlength=\dimen293
 )
@@ -1041,7 +1049,7 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count318
+\etb@tempcnta=\count317
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/ntheorem\ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
@@ -1077,113 +1085,113 @@ Package: ntheorem 2011/08/15 1.33
 \thm@topsep=\skip73
 \thm@topsepadd=\skip74
 Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count319
-\c@currNonectr=\count320
+\c@endNonectr=\count318
+\c@currNonectr=\count319
 \mysavskip=\skip75
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
 \thm@amstmpdepth=\dimen310
 \tagwidth=\dimen311
 )
-\c@currproofctr=\count321
-\c@endproofctr=\count322
-\c@proof=\count323
-\c@currtheoremxctr=\count324
-\c@endtheoremxctr=\count325
-\c@theoremx=\count326
-\c@currtheoremstarredctr=\count327
-\c@endtheoremstarredctr=\count328
-\c@theoremstarred=\count329
-\c@currlemmactr=\count330
-\c@endlemmactr=\count331
-\c@currcorollaryctr=\count332
-\c@endcorollaryctr=\count333
-\c@currpropositionctr=\count334
-\c@endpropositionctr=\count335
-\c@currconjecturectr=\count336
-\c@endconjecturectr=\count337
-\c@currcriterionctr=\count338
-\c@endcriterionctr=\count339
-\c@currassertionctr=\count340
-\c@endassertionctr=\count341
-\c@currfactctr=\count342
-\c@endfactctr=\count343
-\c@currhypothesisctr=\count344
-\c@endhypothesisctr=\count345
-\c@currdefinitionxctr=\count346
-\c@enddefinitionxctr=\count347
-\c@currdefinitionstarredctr=\count348
-\c@enddefinitionstarredctr=\count349
-\c@definitionstarred=\count350
-\c@currconditionctr=\count351
-\c@endconditionctr=\count352
-\c@curraxiomctr=\count353
-\c@endaxiomctr=\count354
-\c@axiom=\count355
-\c@currpostulatectr=\count356
-\c@endpostulatectr=\count357
-\c@currpropertyctr=\count358
-\c@endpropertyctr=\count359
-\c@currterminologyxctr=\count360
-\c@endterminologyxctr=\count361
-\c@currterminologystarredctr=\count362
-\c@endterminologystarredctr=\count363
-\c@terminologystarred=\count364
-\c@currproblemctr=\count365
-\c@endproblemctr=\count366
-\c@currexamplectr=\count367
-\c@endexamplectr=\count368
-\c@currexercisectr=\count369
-\c@endexercisectr=\count370
-\c@exercise=\count371
-\c@currexercisexctr=\count372
-\c@endexercisexctr=\count373
-\c@exercisex=\count374
-\c@curralgorithmxctr=\count375
-\c@endalgorithmxctr=\count376
-\c@curralgorithmstarredctr=\count377
-\c@endalgorithmstarredctr=\count378
-\c@algorithmstarred=\count379
-\c@currquestionctr=\count380
-\c@endquestionctr=\count381
-\c@currassumptionctr=\count382
-\c@endassumptionctr=\count383
-\c@currremarkctr=\count384
-\c@endremarkctr=\count385
-\c@currnotectr=\count386
-\c@endnotectr=\count387
-\c@currobservationctr=\count388
-\c@endobservationctr=\count389
-\c@currnotationctr=\count390
-\c@endnotationctr=\count391
-\c@currclaimctr=\count392
-\c@endclaimctr=\count393
-\c@currsummaryctr=\count394
-\c@endsummaryctr=\count395
-\c@summary=\count396
-\c@curracknowledgementctr=\count397
-\c@endacknowledgementctr=\count398
-\c@currcasectr=\count399
-\c@endcasectr=\count400
-\c@case=\count401
-\c@curroptionctr=\count402
-\c@endoptionctr=\count403
-\c@option=\count404
-\c@currconclusionctr=\count405
-\c@endconclusionctr=\count406
-\c@conclusion=\count407
-\c@currsolutionctr=\count408
-\c@endsolutionctr=\count409
-\c@solution=\count410
-\c@currmotivationctr=\count411
-\c@endmotivationctr=\count412
-\c@motivation=\count413
-\c@currexms_rawctr=\count414
-\c@endexms_rawctr=\count415
-\c@exms_raw=\count416
-\c@currexrs_rawctr=\count417
-\c@endexrs_rawctr=\count418
-\c@exrs_raw=\count419
+\c@currproofctr=\count320
+\c@endproofctr=\count321
+\c@proof=\count322
+\c@currtheoremxctr=\count323
+\c@endtheoremxctr=\count324
+\c@theoremx=\count325
+\c@currtheoremstarredctr=\count326
+\c@endtheoremstarredctr=\count327
+\c@theoremstarred=\count328
+\c@currlemmactr=\count329
+\c@endlemmactr=\count330
+\c@currcorollaryctr=\count331
+\c@endcorollaryctr=\count332
+\c@currpropositionctr=\count333
+\c@endpropositionctr=\count334
+\c@currconjecturectr=\count335
+\c@endconjecturectr=\count336
+\c@currcriterionctr=\count337
+\c@endcriterionctr=\count338
+\c@currassertionctr=\count339
+\c@endassertionctr=\count340
+\c@currfactctr=\count341
+\c@endfactctr=\count342
+\c@currhypothesisctr=\count343
+\c@endhypothesisctr=\count344
+\c@currdefinitionxctr=\count345
+\c@enddefinitionxctr=\count346
+\c@currdefinitionstarredctr=\count347
+\c@enddefinitionstarredctr=\count348
+\c@definitionstarred=\count349
+\c@currconditionctr=\count350
+\c@endconditionctr=\count351
+\c@curraxiomctr=\count352
+\c@endaxiomctr=\count353
+\c@axiom=\count354
+\c@currpostulatectr=\count355
+\c@endpostulatectr=\count356
+\c@currpropertyctr=\count357
+\c@endpropertyctr=\count358
+\c@currterminologyxctr=\count359
+\c@endterminologyxctr=\count360
+\c@currterminologystarredctr=\count361
+\c@endterminologystarredctr=\count362
+\c@terminologystarred=\count363
+\c@currproblemctr=\count364
+\c@endproblemctr=\count365
+\c@currexamplectr=\count366
+\c@endexamplectr=\count367
+\c@currexercisectr=\count368
+\c@endexercisectr=\count369
+\c@exercise=\count370
+\c@currexercisexctr=\count371
+\c@endexercisexctr=\count372
+\c@exercisex=\count373
+\c@curralgorithmxctr=\count374
+\c@endalgorithmxctr=\count375
+\c@curralgorithmstarredctr=\count376
+\c@endalgorithmstarredctr=\count377
+\c@algorithmstarred=\count378
+\c@currquestionctr=\count379
+\c@endquestionctr=\count380
+\c@currassumptionctr=\count381
+\c@endassumptionctr=\count382
+\c@currremarkctr=\count383
+\c@endremarkctr=\count384
+\c@currnotectr=\count385
+\c@endnotectr=\count386
+\c@currobservationctr=\count387
+\c@endobservationctr=\count388
+\c@currnotationctr=\count389
+\c@endnotationctr=\count390
+\c@currclaimctr=\count391
+\c@endclaimctr=\count392
+\c@currsummaryctr=\count393
+\c@endsummaryctr=\count394
+\c@summary=\count395
+\c@curracknowledgementctr=\count396
+\c@endacknowledgementctr=\count397
+\c@currcasectr=\count398
+\c@endcasectr=\count399
+\c@case=\count400
+\c@curroptionctr=\count401
+\c@endoptionctr=\count402
+\c@option=\count403
+\c@currconclusionctr=\count404
+\c@endconclusionctr=\count405
+\c@conclusion=\count406
+\c@currsolutionctr=\count407
+\c@endsolutionctr=\count408
+\c@solution=\count409
+\c@currmotivationctr=\count410
+\c@endmotivationctr=\count411
+\c@motivation=\count412
+\c@currexms_rawctr=\count413
+\c@endexms_rawctr=\count414
+\c@exms_raw=\count415
+\c@currexrs_rawctr=\count416
+\c@endexrs_rawctr=\count417
+\c@exrs_raw=\count418
 ) (C:/localtexmf\tex/latex/hebrewdoc\hebrewdoc.sty
 Package: hebrewdoc 2018/10/05 Hebrew Macros
 
@@ -1203,7 +1211,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks53
 \XKV@tempa@toks=\toks54
 )
-\XKV@depth=\count420
+\XKV@depth=\count419
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
@@ -1213,17 +1221,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 .sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count421
-\l__fontspec_language_int=\count422
-\l__fontspec_strnum_int=\count423
-\l__fontspec_tmp_int=\count424
-\l__fontspec_tmpa_int=\count425
-\l__fontspec_tmpb_int=\count426
-\l__fontspec_tmpc_int=\count427
-\l__fontspec_em_int=\count428
-\l__fontspec_emdef_int=\count429
-\l__fontspec_strong_int=\count430
-\l__fontspec_strongdef_int=\count431
+\l__fontspec_script_int=\count420
+\l__fontspec_language_int=\count421
+\l__fontspec_strnum_int=\count422
+\l__fontspec_tmp_int=\count423
+\l__fontspec_tmpa_int=\count424
+\l__fontspec_tmpb_int=\count425
+\l__fontspec_tmpc_int=\count426
+\l__fontspec_em_int=\count427
+\l__fontspec_emdef_int=\count428
+\l__fontspec_strong_int=\count429
+\l__fontspec_strongdef_int=\count430
 \l__fontspec_tmpa_dim=\dimen312
 \l__fontspec_tmpb_dim=\dimen313
 \l__fontspec_tmpc_dim=\dimen314
@@ -1290,21 +1298,21 @@ Package: bidi 2020/05/17 v36.3 Bidirectional typesetting in plain TeX and LaTeX
 Package: biditools 2020/05/13 v2 Programming tools for bidi package
 \@bidi@envbody=\toks55
 \@bidi@emptytoks=\toks56
-\bidi@poscount=\count432
+\bidi@poscount=\count431
 
 
 Package biditools Warning: Patching `\enddocument' failed on input line 916.
 
-\bidi@tempcountb=\count433
+\bidi@tempcountb=\count432
 \bidi@temptoksa=\toks57
 \bidi@temptoksb=\toks58
-\bidi@dummies=\count434
+\bidi@dummies=\count433
 \bidi@are@these@correct=\toks59
 \bidi@toks@lista=\toks60
 \bidi@toks@listb=\toks61
-\bidi@stack@length=\count435
+\bidi@stack@length=\count434
 \bidi@empty@stack=\toks62
-\bidi@looprepeat@depth=\count436
+\bidi@looprepeat@depth=\count435
 ) (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
@@ -1313,7 +1321,7 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count437
+\c@abspage=\count436
 Package zref Info: New property: abspage on input line 66.
 )
 \@bidi@copyins@=\insert252
@@ -1323,19 +1331,19 @@ Package zref Info: New property: abspage on input line 66.
 File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
 or XeTeX engine
 \bidi@n@everypar=\toks63
-\bidi@column@check@number=\count438
+\bidi@column@check@number=\count437
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/xelatex/bidi\footnote-xetex-b
 idi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count439
+\c@footdir@label=\count438
 \footdir@toks=\toks64
 )
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/xelatex/bidi\book-xetex-bidi.
-def
-File: book-xetex-bidi.def 2017/06/09 v1.0 bidi adaptations for standard book cl
-ass for XeTeX engine
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/xelatex/bidi\article-xetex-bi
+di.def
+File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
+cle class for XeTeX engine
 )
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/xelatex/bidi\mathtools-xetex-
 bidi.def
@@ -1410,7 +1418,7 @@ ex-bidi.def
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count440
+\bidi@digits=\count439
 \bidi@digits@charclass=\XeTeXcharclass2
 \bidi@sepmark@charclass=\XeTeXcharclass3
 )
@@ -1425,17 +1433,17 @@ m hebcal.sty in Babel)
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\cal-util.de
 f
-\c@tmpA=\count441
-\c@tmpB=\count442
-\c@tmpC=\count443
-\c@tmpD=\count444
-\c@tmpE=\count445
-\c@tmpF=\count446
+\c@tmpA=\count440
+\c@tmpB=\count441
+\c@tmpC=\count442
+\c@tmpD=\count443
+\c@tmpE=\count444
+\c@tmpF=\count445
 )
-\hebrewday=\count447
-\hebrewmonth=\count448
-\hebrewyear=\count449
-\@common=\count450
+\hebrewday=\count446
+\hebrewmonth=\count447
+\hebrewyear=\count448
+\@common=\count449
 )
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -1607,12 +1615,12 @@ Package: stylish 2018/10/05 Stylish Book Design
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count451
-\csq@gtype=\count452
-\csq@glevel=\count453
-\csq@qlevel=\count454
-\csq@maxlvl=\count455
-\csq@tshold=\count456
+\csq@reset=\count450
+\csq@gtype=\count451
+\csq@glevel=\count452
+\csq@qlevel=\count453
+\csq@maxlvl=\count454
+\csq@tshold=\count455
 \csq@ltx@everypar=\toks65
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
@@ -1636,68 +1644,48 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen316
 \enit@toks=\toks66
 \enit@inbox=\box88
-\enit@count@id=\count457
-\enitdp@description=\count458
+\enit@count@id=\count456
+\enitdp@description=\count457
 ))
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count459
-\c@subtable=\count460
+\c@subfigure=\count458
+\c@subtable=\count459
 ) (topological methods in combinatorics.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
  Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 32.
-LaTeX Info: Redefining \sffamily on input line 32.
-LaTeX Info: Redefining \ttfamily on input line 32.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 40.
-LaTeX Info: Redefining \sffamily on input line 40.
-LaTeX Info: Redefining \ttfamily on input line 40.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 282.
-LaTeX Info: Redefining \sffamily on input line 282.
-LaTeX Info: Redefining \ttfamily on input line 282.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 290.
-LaTeX Info: Redefining \sffamily on input line 290.
-LaTeX Info: Redefining \ttfamily on input line 290.
- Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew)
 \openout1 = `"topological methods in combinatorics.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-3.
+2.
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1709,7 +1697,7 @@ Package caption Info: End \AtBeginDocument code.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -1718,25 +1706,25 @@ Package caption Info: End \AtBeginDocument code.
 * \textheight=731.23584pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-45.43198pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
-* \headsep=18.06749pt
+* \headsep=25.0pt
 * \topskip=10.0pt
-* \footskip=25.29494pt
+* \footskip=30.0pt
 * \marginparwidth=56.9055pt
-* \marginparsep=7.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 12.
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1747,11 +1735,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count461
+\c@section@level=\count460
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
  (topological methods in combinatorics.out)
 (topological methods in combinatorics.out)
 \@outlinefile=\write5
@@ -1763,393 +1751,147 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 13.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 13.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 13.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 13.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 13.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 13.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 13.
-LaTeX Font Info:    Redeclaring math accent \check on input line 13.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 13.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 13.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 13.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 13.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 13.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 12.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 12.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 12.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 12.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 12.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 12.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 12.
+LaTeX Font Info:    Redeclaring math accent \check on input line 12.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 12.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 12.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 12.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 12.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 12.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 13.
+(Font)              `operators' in the math version `normal' on input line 12.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/OpenSans(0)/m/n on input line 13.
+(Font)                  OT1/cmr/m/n --> TU/OpenSans(0)/m/n on input line 12.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 13.
+(Font)              `operators' in the math version `bold' on input line 12.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/m/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/m/n on input line 12.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/OpenSans(0)/m/n --> TU/OpenSans(0)/m/n on input line
- 13.
+ 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/OpenSans(0)/m/it on input line 13.
+(Font)                  OT1/cmr/m/it --> TU/OpenSans(0)/m/it on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/b/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/b/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 13.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 12.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/OpenSans(0)/m/n --> TU/OpenSans(0)/b/n on input line
- 13.
+ 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/OpenSans(0)/b/it on input line 13.
+(Font)                  OT1/cmr/bx/it --> TU/OpenSans(0)/b/it on input line 12.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 13.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 13.
-LaTeX Info: Redefining \rmfamily on input line 13.
-LaTeX Info: Redefining \sffamily on input line 13.
-LaTeX Info: Redefining \ttfamily on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 12.
+LaTeX Info: Redefining \rmfamily on input line 12.
+LaTeX Info: Redefining \sffamily on input line 12.
+LaTeX Info: Redefining \ttfamily on input line 12.
  Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 13.
-LaTeX Info: Redefining \sffamily on input line 13.
-LaTeX Info: Redefining \ttfamily on input line 13.
+LaTeX Info: Redefining \rmfamily on input line 12.
+LaTeX Info: Redefining \sffamily on input line 12.
+LaTeX Info: Redefining \ttfamily on input line 12.
  Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
-File: sources/polyhedron.jpg Graphic file (type bmp)
-<sources/polyhedron.jpg>
-LaTeX Info: Redefining \rmfamily on input line 15.
-LaTeX Info: Redefining \sffamily on input line 15.
-LaTeX Info: Redefining \ttfamily on input line 15.
-LaTeX Info: Redefining \rmfamily on input line 15.
-LaTeX Info: Redefining \sffamily on input line 15.
-LaTeX Info: Redefining \ttfamily on input line 15.
- [1
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 
-
-
-] (topological methods in combinatorics.toc
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 1.
-LaTeX Info: Redefining \sffamily on input line 1.
-LaTeX Info: Redefining \ttfamily on input line 1.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
-
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
+.
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Info: Redefining \rmfamily on input line 6.
-LaTeX Info: Redefining \sffamily on input line 6.
-LaTeX Info: Redefining \ttfamily on input line 6.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 8.
-LaTeX Info: Redefining \sffamily on input line 8.
-LaTeX Info: Redefining \ttfamily on input line 8.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 24.
-LaTeX Info: Redefining \sffamily on input line 24.
-LaTeX Info: Redefining \ttfamily on input line 24.
-LaTeX Info: Redefining \rmfamily on input line 36.
-LaTeX Info: Redefining \sffamily on input line 36.
-LaTeX Info: Redefining \ttfamily on input line 36.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 38.
-LaTeX Info: Redefining \sffamily on input line 38.
-LaTeX Info: Redefining \ttfamily on input line 38.
-
-Setting \if@calendar@hebrew Setting \if@calendar@hebrew)
-\tf@toc=\write6
-\openout6 = `"topological methods in combinatorics.toc"'.
-
-\c@lecturenumber=\count462
- [2
-
-]
-LaTeX Info: Redefining \rmfamily on input line 31.
-LaTeX Info: Redefining \sffamily on input line 31.
-LaTeX Info: Redefining \ttfamily on input line 31.
-
-Overfull \hbox (4.1057pt too wide) in paragraph at lines 26--33
-[]\TU/OpenSansHebrew(0)/m/n/10 להיפך, ודאי ישנן טעויות בסיכום! אעריך אם הערות ו
-תיקונים ישלחו אלי בכתובת דוא"ל [][][][][]\TU/OpenSans(0)/m/n/10 tzorani.elad@gm
-ail.com[][][][][]\TU/OpenSansHebrew(0)/m/n/10 . []
- []
-
-LaTeX Info: Redefining \rmfamily on input line 40.
-LaTeX Info: Redefining \sffamily on input line 40.
-LaTeX Info: Redefining \ttfamily on input line 40.
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 47.
-LaTeX Info: Redefining \sffamily on input line 47.
-LaTeX Info: Redefining \ttfamily on input line 47.
- Setting \if@calendar@hebrew [3
-
-] [4
-
-]
-Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 126.
- [1
-
-]
-פרק 1.
-Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
-input line 143.
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 215.
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 236.
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 244.
-[2
-
-]
-Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
-ut line 267.
- [3]
-LaTeX Info: Redefining \rmfamily on input line 400.
-LaTeX Info: Redefining \sffamily on input line 400.
-LaTeX Info: Redefining \ttfamily on input line 400.
-LaTeX Info: Redefining \rmfamily on input line 459.
-LaTeX Info: Redefining \sffamily on input line 459.
-LaTeX Info: Redefining \ttfamily on input line 459.
- [4] [5]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 664.
- [6] [7] [8] [9] [10]
-Overfull \hbox (15.5218pt too wide) in paragraph at lines 1176--1187
-[]\TU/OpenSansHebrew(0)/m/n/10 ממשפט [][][][][][]1.2.8[][][][][][] נובע ש־$\OML
-/cmm/m/it/10 q$ \TU/OpenSansHebrew(0)/m/n/10 בקמור של $\OML/cmm/m/it/10 d$ \TU/
-OpenSansHebrew(0)/m/n/10 נקודות מבין $\OML/cmm/m/it/10 a[]; [] ; a[]$\TU/OpenSa
-nsHebrew(0)/m/n/10 , ובלי הגבלת הכלליות נניח כי $\OML/cmm/m/it/10 q \OMS/cmsy/m
-/n/10 2 [] []$\TU/OpenSansHebrew(0)/m/n/10 . []
- []
+ line 15.
+Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
+input line 18.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 55.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
+line 67.
 
-LaTeX Info: Redefining \rmfamily on input line 1255.
-LaTeX Info: Redefining \sffamily on input line 1255.
-LaTeX Info: Redefining \ttfamily on input line 1255.
-[11]
-Overfull \hbox (26.41765pt too wide) in paragraph at lines 1301--1306
-[][]\TU/OpenSansHebrew(0)/m/n/10 בדיוק כמו בהוכחת משפט קרתיאודורי, נבחר $\OML/c
-mm/m/it/10 A[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^R \OML/cmm/m/it/10 A$ \T
-U/OpenSansHebrew(0)/m/n/10 מינימלית עבורה $\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 
-2 [] []$\TU/OpenSansHebrew(0)/m/n/10 .[]
- []
-
-
-Overfull \hbox (28.54178pt too wide) in paragraph at lines 1337--1346
-[][]\TU/OpenSansHebrew(0)/m/it/10 תהיינה $\OML/cmm/m/it/10 A[]; [] ; A[] \OMS/c
-msy/m/n/10 ^^R \U/msb/m/n/10 R[]$ \TU/OpenSansHebrew(0)/m/it/10 ותהי $\OML/cmm/
-m/it/10 p \OMS/cmsy/m/n/10 2 [][] [] []$\TU/OpenSansHebrew(0)/m/it/10 .[]
- []
-
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 1349.
-[12]
-LaTeX Info: Redefining \rmfamily on input line 1449.
-LaTeX Info: Redefining \sffamily on input line 1449.
-LaTeX Info: Redefining \ttfamily on input line 1449.
-
-Overfull \hbox (0.33047pt too wide) in paragraph at lines 1442--1451
-[][]\TU/OpenSansHebrew(0)/m/n/10 בהינתן $\OML/cmm/m/it/10 K \OT1/cmr/m/n/10 = [
-]$ \TU/OpenSansHebrew(0)/m/n/10 משפחה של קבוצות קמורות ב־$\U/msb/m/n/10 R[]$ \T
-U/OpenSansHebrew(0)/m/n/10 נגדיר את \TU/OpenSansHebrew(0)/m/it/10 העצב [][]\TU/
-OpenSans(0)/m/it/10 (nerve)[][]
- []
-
-
-Overfull \hbox (7.52086pt too wide) in paragraph at lines 1490--1503
-[][]\TU/OpenSansHebrew(0)/m/it/10 יהיו $\OML/cmm/m/it/10 K[]; [] ; K[]$ \TU/Ope
-nSansHebrew(0)/m/it/10 קבוצות קמורות ב־$\U/msb/m/n/10 R[]$ \TU/OpenSansHebrew(0
-)/m/it/10 ותהי $\OMS/cmsy/m/n/10 K [][]\OT1/cmr/m/n/10 = []$\TU/OpenSansHebrew(
-0)/m/it/10 . אז קיימים פיאונים $\OML/cmm/m/it/10 P[]; [] ; P[]$[]
- []
-
-File: sources/1.png Graphic file (type bmp)
-<sources/1.png>
-File: sources/2.png Graphic file (type bmp)
-<sources/2.png>
-File: sources/3.png Graphic file (type bmp)
-<sources/3.png>
-File: sources/4.png Graphic file (type bmp)
-<sources/4.png>
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 1609.
-[13]
-
-LaTeX Warning: Command \u invalid in math mode on input line 1649.
-
-Missing character: There is no ̆ in font cmmi7!
-
-LaTeX Warning: Command \u invalid in math mode on input line 1655.
-
-Missing character: There is no ̆ in font cmmi7!
-[14]
-LaTeX Info: Redefining \rmfamily on input line 1710.
-LaTeX Info: Redefining \sffamily on input line 1710.
-LaTeX Info: Redefining \ttfamily on input line 1710.
- [15]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
-860.
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [16]
-LaTeX Info: Redefining \rmfamily on input line 1916.
-LaTeX Info: Redefining \sffamily on input line 1916.
-LaTeX Info: Redefining \ttfamily on input line 1916.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textenglish' on input line 1916.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2033.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 2033.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2033.
-
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 2049.
-[18] [19]
-פרק 2.
-[20
+[1
 
 ]
-Overfull \hbox (7.25386pt too wide) in paragraph at lines 2295--2309
-[][]\TU/OpenSansHebrew(0)/m/it/10 קומפלקס סימפליציאלי מופשט \TU/OpenSansHebrew(
-0)/m/n/10 הוא קבוצת קודקודים $\OML/cmm/m/it/10 V$ \TU/OpenSansHebrew(0)/m/n/10 
-וקבוצה[]
+LaTeX Info: Redefining \rmfamily on input line 155.
+LaTeX Info: Redefining \sffamily on input line 155.
+LaTeX Info: Redefining \ttfamily on input line 155.
+
+Overfull \hbox (9.09657pt too wide) in paragraph at lines 153--161
+[][]$\OML/cmm/m/it/10 R$ \TU/OpenSansHebrew(0)/m/n/10 הוא [][]\TU/OpenSans(0)/m
+/n/10 Cohen-Maccaulay[] []\TU/OpenSansHebrew(0)/m/n/10 אם ורק אם קיימים $\OML/c
+mm/m/it/10 ^^R[]; [] ; ^^R[]$ \TU/OpenSansHebrew(0)/m/n/10 בלתי־תלויים אלגברית 
+ו־$\OML/cmm/m/it/10 ^^Q[]; [] ; ^^Q[]$ \TU/OpenSansHebrew(0)/m/n/10 הומוגניים[]
+
  []
 
+[2]
+LaTeX Info: Redefining \rmfamily on input line 164.
+LaTeX Info: Redefining \sffamily on input line 164.
+LaTeX Info: Redefining \ttfamily on input line 164.
+Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
+ut line 164.
+LaTeX Info: Redefining \rmfamily on input line 167.
+LaTeX Info: Redefining \sffamily on input line 167.
+LaTeX Info: Redefining \ttfamily on input line 167.
 
-Overfull \hbox (10.23878pt too wide) in paragraph at lines 2326--2333
-[][]\TU/OpenSansHebrew(0)/m/it/10 קומפלקס סימפליציאלי גיאומטרי \TU/OpenSansHebr
-ew(0)/m/n/10 הוא אוסף $\OML/cmm/m/it/10 Y$ \TU/OpenSansHebrew(0)/m/n/10 של סימפ
-לקסים[]
+Overfull \hbox (10.376pt too wide) in paragraph at lines 165--174
+[][]$\OML/cmm/m/it/10 k []$ \TU/OpenSansHebrew(0)/m/it/10 הוא [][]\TU/OpenSans(
+0)/m/it/10 CM[] []\TU/OpenSansHebrew(0)/m/it/10 אם ורק אם לכל $\OML/cmm/m/it/10
+ ^^[ \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 X$ \TU/OpenSansHebrew(0)/m/it/10 ולכל 
+$\OML/cmm/m/it/10 i < [] []$ \TU/OpenSansHebrew(0)/m/it/10 מתקיים $[] [] \OT1/c
+mr/m/n/10 =$[]
  []
 
-File: sources/1.1.png Graphic file (type bmp)
-<sources/1.1.png>
-File: sources/1.2.png Graphic file (type bmp)
-<sources/1.2.png>
+LaTeX Info: Redefining \rmfamily on input line 196.
+LaTeX Info: Redefining \sffamily on input line 196.
+LaTeX Info: Redefining \ttfamily on input line 196.
+LaTeX Info: Redefining \rmfamily on input line 203.
+LaTeX Info: Redefining \sffamily on input line 203.
+LaTeX Info: Redefining \ttfamily on input line 203.
 
-Overfull \hbox (1.88849pt too wide) in paragraph at lines 2456--2463
-[][]\TU/OpenSansHebrew(0)/m/it/10 המימוש הגיאומטרי של $\OML/cmm/m/it/10 X$ \TU/
-OpenSansHebrew(0)/m/n/10 הוא הקומפלקס הגיאומטרי $\OML/cmm/m/it/10 Y$ \TU/OpenSa
-nsHebrew(0)/m/n/10 שסימפלקסיו הם $[] []$ לכל $[] \OMS/cmsy/m/n/10 2$[]
+Overfull \hbox (4.34312pt too wide) in paragraph at lines 200--211
+[][]\TU/OpenSansHebrew(0)/m/it/10 אם $\OML/cmm/m/it/10 R$ \TU/OpenSansHebrew(0)
+/m/it/10 חוג סטנדרטי וגם [][]\TU/OpenSans(0)/m/it/10 Cohen-Maccaulay[] []\TU/Op
+enSansHebrew(0)/m/it/10 (כלומר, $\OML/cmm/m/it/10 R$ \TU/OpenSansHebrew(0)/m/it
+/10 חופשי כ־$\OML/cmm/m/it/10 k []$\TU/OpenSansHebrew(0)/m/it/10 ־מודול), וגם $
+[] \OML/cmm/m/it/10 R \OT1/cmr/m/n/10 =$[]
  []
 
-[21]
-Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
-ut line 2540.
- [22]
-Overfull \hbox (98.8021pt too wide) detected at line 2739
-[]
- []
-
-[23] [24] [25]
-Overfull \hbox (134.8378pt too wide) detected at line 2961
-[][]
- []
-
-
-Overfull \hbox (39.90178pt too wide) detected at line 3005
-[]\OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[] [] [] C[] [] []\OMS
-/cmsy/m/n/10 ! [] ! \OML/cmm/m/it/10 C[] [] [] C[] [] [] C[] [] \OMS/cmsy/m/n/1
-0 ! []
- []
-
-[26]
-LaTeX Info: Redefining \rmfamily on input line 3060.
-LaTeX Info: Redefining \sffamily on input line 3060.
-LaTeX Info: Redefining \ttfamily on input line 3060.
- [27] [28] [29] [30]
-פרק 3.
-[31
-
-] [32] [33]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 386
-7.
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-LaTeX Info: Redefining \rmfamily on input line 3870.
-LaTeX Info: Redefining \sffamily on input line 3870.
-LaTeX Info: Redefining \ttfamily on input line 3870.
-
-Overfull \hbox (3.32019pt too wide) in paragraph at lines 3882--3892
-[][]\TU/OpenSansHebrew(0)/m/it/10 יהי $\OML/cmm/m/it/10 P$ \TU/OpenSansHebrew(0
-)/m/it/10 פיאון עם $\OML/cmm/m/it/10 n$ \TU/OpenSansHebrew(0)/m/it/10 קודקודים 
-ב־$\U/msb/m/n/10 R[]$\TU/OpenSansHebrew(0)/m/it/10 . אזי $\OML/cmm/m/it/10 f[] 
-[] \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 f[] []$[]
- []
-
-[34] [35]
-Overfull \hbox (16.29613pt too wide) in paragraph at lines 4012--4027
-[]\TU/OpenSansHebrew(0)/m/n/10 שהשתמשנו בו במעבר האחרון מתקיים לכל $\OML/cmm/m/
-it/10 u; v \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0$ \TU/OpenSansHebrew(0)/m/n/10
- ולכן לכל $\OML/cmm/m/it/10 u; v$ \TU/OpenSansHebrew(0)/m/n/10 כלשהם (גם לא שלמ
-ים). אכן, $[] \OML/cmm/m/it/10 F [] <$[]
- []
-
-[36]
-LaTeX Info: Redefining \rmfamily on input line 4065.
-LaTeX Info: Redefining \sffamily on input line 4065.
-LaTeX Info: Redefining \ttfamily on input line 4065.
-LaTeX Info: Redefining \rmfamily on input line 4087.
-LaTeX Info: Redefining \sffamily on input line 4087.
-LaTeX Info: Redefining \ttfamily on input line 4087.
-LaTeX Info: Redefining \rmfamily on input line 4143.
-LaTeX Info: Redefining \sffamily on input line 4143.
-LaTeX Info: Redefining \ttfamily on input line 4143.
- Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 4152.
-LaTeX Info: Redefining \sffamily on input line 4152.
-LaTeX Info: Redefining \ttfamily on input line 4152.
- Setting \if@calendar@hebrew [37] [38]
-Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
-line 4324.
- [39]
-\tf@thm=\write7
-\openout7 = `"topological methods in combinatorics.thm"'.
+[3]
+\tf@thm=\write6
+\openout6 = `"topological methods in combinatorics.thm"'.
 
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -2201,32 +1943,11 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-
-(topological methods in combinatorics.aux Setting \if@calendar@hebrew
+ [4] (topological methods in combinatorics.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 32.
-LaTeX Info: Redefining \sffamily on input line 32.
-LaTeX Info: Redefining \ttfamily on input line 32.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 40.
-LaTeX Info: Redefining \sffamily on input line 40.
-LaTeX Info: Redefining \ttfamily on input line 40.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 282.
-LaTeX Info: Redefining \sffamily on input line 282.
-LaTeX Info: Redefining \ttfamily on input line 282.
- Setting \if@calendar@hebrew
-Setting \if@calendar@hebrew
-LaTeX Info: Redefining \rmfamily on input line 290.
-LaTeX Info: Redefining \sffamily on input line 290.
-LaTeX Info: Redefining \ttfamily on input line 290.
  Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew)
 Package rerunfilecheck Info: File `"topological methods in combinatorics".out' 
@@ -2234,12 +1955,12 @@ has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34986 strings out of 411254
- 718732 string characters out of 2828529
- 1330156 words of memory out of 3000000
- 54746 multiletter control sequences out of 15000+600000
- 415628 words of font info for 136 fonts, out of 8000000 for 9000
+ 34499 strings out of 411254
+ 708717 string characters out of 2828529
+ 1329671 words of memory out of 3000000
+ 54328 multiletter control sequences out of 15000+600000
+ 406296 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,122p,1312b,1054s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,15n,122p,1312b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on topological methods in combinatorics.pdf (43 pages).
+Output written on topological methods in combinatorics.pdf (4 pages).

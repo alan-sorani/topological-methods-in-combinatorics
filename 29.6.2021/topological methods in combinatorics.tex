@@ -1,0 +1,305 @@
+\documentclass[10pt]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\title{הרצאה בשיטות טופולוגיות בקומבינטוריקה) \\ \large{אביב 2021, הטכניון}}
+\author{הרצאותיו של פרופ' רועי משולם \\ \large רשימות על ידי אלעד צורני}
+
+\begin{document}
+
+\begin{remark}
+נושא משפט החסם העליון לשילושים של ספירות לא יהיה במבחן.
+\end{remark}
+
+\begin{definition}[אלגברת הפיאות]
+יהי
+$X$
+קומפלקס סימפליצאלי על
+$\brs{n}$.
+\emph{אלגברת הפיאות של
+$X$}
+מעל שדה
+$k$
+היא ה־%
+$k$%
+־אלגברה
+$K\brs{X} \ceq k\brs{x_1, \ldots, x_n}/I_X$
+כאשר
+\[\text{.} I_X = \prs{\set{\prod_{i \in \alpha} x_i}{\text{$\alpha$ isn't a face of $X$}}}\]
+\end{definition}
+
+\begin{remark}
+$k\brs{X}$
+אלגברה סטנדרטית מעל
+$k$.
+\end{remark}
+
+\begin{definition}
+עבור אלגברה סטנדרטית
+$A$
+נגדיר את פונקציית הילברט
+\[H\prs{A,j} \ceq \dim A_j\]
+ונגדיר
+\[\text{.} F\prs{A,j} \ceq \sum_{j=0}^{\infty} H\prs{A,j} t^j\]
+\end{definition}
+
+נניח מעתה כי
+$k$
+שדה אינסופי.
+
+\begin{proposition}
+אם
+$\dim X = d- 1$
+אז
+\[\text{.} F\prs{k\brs{X}, t} = \frac{\sum_{i=0}^d h_i t^i}{\prs{1-t}^d}\]
+כאשר ה־%
+$h_i$
+הם מקדמי ה־%
+$h$%
+־וקטור.
+\end{proposition}
+
+\begin{proof}
+מתקיים
+$H\prs{k\brs{X}, 0} = 1$.
+נניח כי
+$j > 0$.
+מתקיים
+\begin{align*}
+H\prs{k\brs{X}, j} &= \sum_{\sigma \in X} \# \prs{\text{monomials of degree $j$ with support being $\sigma$}}
+\\&=
+\sum_{\sigma \in X} \# \set{\prs{\alpha_i}_{i \in \sigma}}{\substack{\alpha_i \geq 1 \\ \sum_{i \in \sigma} \alpha_i = j}}
+\\&=
+\sum_{\sigma \in X} \# \set{\prs{\beta_i}_{i \in \sigma}}{\substack{\beta_i \geq 0 \\ \sum_{i \in \sigma} \beta_i = j - \abs{\sigma}}}
+\\&=
+\sum_{\sigma \in X} \binom{\prs{j-\abs{\sigma}} + \abs{\sigma} - 1}{\abs{\sigma} - 1}
+\\&=
+\sum_{\sigma \in X} \binom{j-1}{\abs{\sigma} - 1}
+\\&=
+\sum_{k=0}^{d-1} f_k \binom{j-1}{k}
+\end{align*}
+
+לכן
+\begin{align*}
+F\prs{k\brs{X}, t} &= 1 + \sum_{j\geq 1} H\prs{k\brs{X}, j} t^j
+\\&=
+1 + \sum_{j \geq 1} \sum_{k \geq 0} f_k \binom{j-1}{k} t^{j}
+\\&=
+1 + \sum_{k \geq 0} f_k \sum_{j \geq 1} \binom{j-1}{k} t^j
+\\&=
+1 + \sum_{k \geq 0} f_k t \sum_{j \geq 1} \binom{j-1}{k} t^{j-1}
+\\&=
+1 + \sum_{k \geq 0} f_k t \sum_{j \geq 0} \binom{j}{k} t^j
+\\&=
+1 + \sum_{k \geq 0} f_k t \sum_{j \geq k} t^j
+\\&=
+1 + \sum_{k \geq 0} f_k t \sum_{j=0}^{\infty} \binom{j+k}{k} t^{j+k}
+\\&=
+1 + \sum_{k \geq 0} f_k t^{k+1} \sum_{j=0}^{\infty} \binom{j+k}{k} t^j
+\\&=
+1 + \sum_{k \geq 0} f_k \prs{\frac{t}{1-t}^{k+1}}
+\\&=
+\sum_{k \geq -1} f_k \prs{\frac{t}{1-t}}^{k+1}
+\\&=
+\sum_{k = 0}^d f_{k-1} \prs{\frac{t}{1-t}}^k
+\\&= \prs{\frac{t}{1-t}}^d \sum_{k=0}^d f_{k-1} \prs{\frac{1-t}{t}^{d-k}}
+\\&= \prs{\frac{t}{1-t}}^d \sum_{k=0}^d f_{k-1} \prs{t^{-1} - 1}^{d-k}
+\\&= \prs{\frac{t}{1-t}}^d \sum_{k=0}^d h_k \prs{t^{-1}}^{d-k}
+\\&= \frac{\sum_{k=0}^d h_k t^k}{\prs{1-t}^d}
+\end{align*}
+ובפרט
+$\dim k\brs{X} = d$
+כי
+\[\text{.} 0 < f_{d-1} = \sum_{k=0}^d h_k \cdot 1^k\]
+\end{proof}
+
+נחזור לאלגברה קומוטטיבית.
+
+\begin{remark}
+תהי
+$A$
+אלגברה סטנדרטית מעל
+$k$
+אינסופי ונסמן
+$d \ceq \dim A$.
+לפי נתר, קיימים
+$\theta_1, \ldots, \theta_d \in A_1$
+בלתי־תלויים אלגברית מעל
+$k$
+ואיברים הומוגניים
+$\eta_1, \ldots, \eta_s \in A$
+עבורם
+\[\text{.} A = \sum_{j=1}^s k\brs{\eta_1, \ldots, \theta_d} \cdot \eta_j\]
+\end{remark}
+
+\begin{definition}[חוג \text{Cohen-Maccaulay}]
+חוג
+$R$
+יקרא
+\text{Cohen-Maccauly}
+אם קיימים
+$\theta_1, \ldots, \theta_d$
+בלתי־תלויים אלגברית עבורם
+$R$
+מודול חופשי מדרגה סופית מעל
+$k\brs{\theta_1, \ldots, \theta_d}$.
+\end{definition}
+
+\begin{remark}
+$R$
+הוא
+\textenglish{Cohen-Maccaulay}
+אם ורק אם קיימים
+$\theta_1, \ldots, \theta_d$
+בלתי־תלויים אלגברית ו־%
+$\eta_1, \ldots, \eta_s$
+הומוגניים עבורם
+\[\text{.} R = \bigoplus_{j=1}^s k\brs{\theta_1, \ldots, \theta_d} \cdot \eta_j\]
+\end{remark}
+
+\begin{theorem}[\textenglish{Reisner}]
+$k\brs{X}$
+הוא
+\textenglish{CM}
+אם ורק אם לכל
+$\sigma \in X$
+ולכל
+$i < \dim\prs{\mrm{lk}\prs{X,\sigma}}$
+מתקיים
+$\tilde{H}_i\prs{\mrm{lk}\prs{X,\sigma}} = 0$.
+\end{theorem}
+
+נזכיר שמתקיים
+\begin{align*}
+\mrm{st}\prs{X,\sigma} = \set{\tau \in X}{\tau \cup \sigma \in X} \\
+\text{.} \mrm{lk}\prs{X,\sigma} \ceq \set{\tau \in X}{\tau \cup \sigma \in X}{ \tau \cap \sigma = \ns}
+\end{align*}
+
+\begin{remark}
+נניח ש־%
+$X$
+שילוש של
+$S^{d-1}$.
+אזי לכל
+$\sigma \in X$
+מתקיים
+$\mrm{lk}\prs{X,\sigma}$
+שילוש של
+$S^{d - \dim \sigma - 2} = S^{d - \abs{\sigma} - 1}$.
+לכן
+$k\brs{X}$
+הוא
+\textenglish{Cohen-Maccaulay}.
+\end{remark}
+
+\begin{proposition}
+אם
+$R$
+חוג סטנדרטי וגם
+\textenglish{Cohen-Maccaulay}
+(כלומר,
+$R$
+חופשי כ־%
+$k\brs{\theta_1, \ldots, \theta_d}$%
+־מודול), וגם
+$\dim R = d$
+אז
+\[\text{.} F\prs{R,t} = \frac{F\prs{\quot{R}{\prs{\theta_1, \ldots, \theta_d}, t}}}{\prs{1-t}^d}\]
+\end{proposition}
+
+\begin{proof}
+קיימים
+$\eta_1, \ldots, \eta_s$
+כאשר
+$\eta_i \in R_{\ell_i}$
+ומתקיים
+\[\text{.} R = \bigoplus_{j=1}^s k\brs{\theta_1, \ldots, \theta_d} \cdot \eta_j\]
+נסמן גם
+$\ell_i = \deg \eta_i$.
+כעת,
+\begin{align*}
+\text{.} \prs{\theta_1, \ldots, \theta_d} &= \sum_{i \in [d]} R_{\theta_i} = \set{f\prs{\theta_1, \ldots, \theta_d}}{\substack{f \in k\brs{x_1, \ldots, x_d} \\ f\prs{0} = 0}}
+\end{align*}
+נחשב את
+$F\prs{\quot{R}{\prs{\theta_1, \ldots, \theta_d}}, t}$.
+נטען ראשית כי
+\[\eta_1 + \prs{\theta_1, \ldots, \theta_d}, \ldots, \eta_s + \prs{\theta_1, \ldots, \eta_s}\]
+בסיס
+של
+$\quot{R}{\prs{\theta_1, \ldots, \theta_d}}$
+מעל
+$k$.
+נסמן
+$\bar{\eta}_i \ceq \eta_i + \prs{\theta_1, \ldots, \theta_s}$.
+
+\begin{itemize}
+\item אם
+$r \in R$
+ניתן לכתוב
+$r = \sum_{j=1}^s f_j\prs{\theta_1 ,\ldots, \theta_d} \eta_j$.
+נכתוב
+$f_j = c_j + g_j$
+כאשר
+$c_j \in k$
+וכאשר
+$g_j\prs{0} = 0$.
+אז
+\begin{align*}
+\text{.} \bar{r} = \sum_{j=1}^s \prs{\overline{g_j\prs{\theta_1, \ldots, \theta_d}} + c_j} \bar{\eta}_j = \sum_{j=0}^s c_j \bar{\eta}_j
+\end{align*}
+
+\item ההצגה הנ"ל יחידה:
+אם
+\[\bar{r} = \sum_j c_j \bar{\eta}_j = \sum_j c_j' \bar{\eta}_j\]
+אז
+\[\sum_{j=1}^s \prs{c_j - c'_j} \bar{\eta}_j = 0\]
+ואז
+\[\sum_{j \in \brs{s}} \prs{c_j - c_j'} \eta_j \in \prs{\theta_1 ,\ldots, \theta_d}\]
+ולכן
+$c_j - c_j' \in \prs{\theta_1 ,\ldots, \theta_d}$
+לכל
+$j$.
+
+אם
+$\deg \eta_j = 0$
+נקבל
+$c_j = c_j'$.
+אם
+$\deg \eta_j > 0$
+נקבל
+\[\text{.} \sum_{\deg \eta_j > 0} \prs{c_j - c_j'} \eta_j = g\prs{\theta_1, \ldots, \theta_d}\]
+נבחר
+$j_0$
+עבורו
+$\deg \eta_{j_0} = 0$,
+כלומר
+$\eta_{j_0} = \lambda \in k \setminus \set{0}$.
+אז
+\begin{align*}
+\text{.} \sum_{\ell_j > 0} \prs{c_j - c_j'} \eta_j = \frac{g\prs{\theta_1 ,\ldots, \theta_d}}{\lambda} \eta_{j_0}
+\end{align*}
+מכך נובע
+$c_j - c_j' = 0$
+לכל
+$j$
+עם
+$\ell_j > 0$
+(גום
+$g\prs{\theta_1, \ldots, \theta_d} = 0$.
+\end{itemize}
+
+נקבל כעת כי
+\begin{align*}
+F\prs{\quot{R}{\prs{\theta_1,\ldots, \theta_d}}, t} &= \sum_{j \in \brs{s}} t^{\ell_j}
+\end{align*}
+
+...
+\end{proof}
+
+
+
+\end{document}

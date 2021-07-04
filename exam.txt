@@ -1,0 +1,22 @@
+There'll be 5 questions in the exam.
+
+-Know the proofs for Tverberg and Helly, and know the few applications (e.g. those in the exercise sheets).
+
+-Know convexity.
+
+-Polytopes:
+Know the definitins, basic properties etc.
+Be familiar with C(n,d) and its (d-1)-dimensional faces. Be familiar with the Gale condition (and proof).
+
+-UBT for polytopes:
+Know the steps for the proof of UBT.
+Know the h-vector and h-vector. Know their relations (explicitly and H_X(t) = F_X(t-1)).
+
+-Homology:
+A bit of homology, considering we don't know the standard computations of homology.
+E.g. look at exercises 1-5.
+
+-Shellability:
+Know R(F_i), X = \bigcup_i [R(F_i), F_i], etc.
+
+(No Möbius functions)
